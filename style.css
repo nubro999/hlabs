@@ -1031,33 +1031,100 @@ section {
   height: 320px;
   overflow: hidden;
   position: relative;
-  border-bottom: 1px solid rgba(212, 168, 83, 0.08);
+  border-bottom: 1px solid rgba(239, 175, 66, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(7, 25, 34, 0.6);
 }
 
-.division-art-container::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, transparent 30%, rgba(13, 27, 42, 0.98) 100%);
-  pointer-events: none;
+.division-svg {
+  width: 85%;
+  height: 85%;
+  opacity: 0.9;
+  transition: opacity 0.4s ease;
 }
 
-.division-art {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+.division-card:hover .division-svg {
+  opacity: 1;
+}
+
+/* SVG Draw Animation — line drawing effect */
+.svg-draw {
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  animation: svgDraw 2s ease-out forwards;
+}
+
+.svg-draw.delay-1 {
+  animation-delay: 0.4s;
+}
+
+.svg-draw.delay-2 {
+  animation-delay: 0.8s;
+}
+
+@keyframes svgDraw {
+  to { stroke-dashoffset: 0; }
+}
+
+/* SVG Fade — pulse opacity */
+.svg-fade {
+  animation: svgFade 3s ease-in-out infinite alternate;
+}
+
+@keyframes svgFade {
+  0%   { opacity: 0.15; }
+  100% { opacity: 0.35; }
+}
+
+/* SVG Float — gentle vertical bob */
+.svg-float {
+  animation: svgFloat 4s ease-in-out infinite;
+}
+
+@keyframes svgFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* SVG Pulse — breathing scale */
+.svg-pulse {
+  animation: svgPulse 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes svgPulse {
+  0%   { opacity: 0.6; transform: scale(0.97); }
+  100% { opacity: 1; transform: scale(1.03); }
+}
+
+/* SVG Orbit — circular motion */
+.svg-orbit {
+  animation: svgOrbit 5s linear infinite;
+  transform-origin: 200px 180px;
+}
+
+@keyframes svgOrbit {
+  from { transform: rotate(0deg) translateX(110px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(110px) rotate(-360deg); }
+}
+
+/* SVG Spin — slow rotation */
+.svg-spin {
+  animation: svgSpin 12s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes svgSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
 
 .division-card:hover {
   transform: translateY(-8px);
-  border-color: rgba(212, 168, 83, 0.3);
+  border-color: rgba(239, 175, 66, 0.3);
   background: rgba(17, 47, 72, 0.4);
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
-}
-
-.division-card:hover .division-art {
-  transform: scale(1.05);
 }
 
 .division-content {
@@ -1237,7 +1304,121 @@ section {
    ============================================ */
 #contact {
   background: var(--navy-deepest);
-  border-top: 1px solid rgba(212, 168, 83, 0.08);
+  border-top: 1px solid rgba(239, 175, 66, 0.08);
+}
+
+/* Glassmorphism Card */
+.contact-glass-card {
+  max-width: 680px;
+  margin: 0 auto;
+  background: rgba(16, 51, 65, 0.35);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(239, 175, 66, 0.15);
+  border-radius: 24px;
+  padding: var(--space-2xl) var(--space-xl);
+  text-align: center;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.3);
+}
+
+.contact-title {
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--white-pure);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-sm);
+}
+
+.contact-subtitle {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.7;
+  margin-bottom: var(--space-xl);
+}
+
+/* Form Layout */
+.contact-form {
+  text-align: left;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group-full {
+  margin-bottom: var(--space-lg);
+}
+
+.form-group label {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--white-pure);
+}
+
+.form-group input,
+.form-group textarea {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--white-pure);
+  outline: none;
+  transition: border-color var(--duration-fast) ease, background var(--duration-fast) ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--gold);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-submit-btn {
+  display: block;
+  width: 100%;
+  padding: 1.1rem;
+  background: var(--gold);
+  color: var(--navy-deepest);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-out);
+  box-shadow: 0 4px 20px rgba(239, 175, 66, 0.3);
+}
+
+.contact-submit-btn:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(239, 175, 66, 0.45);
 }
 
 .contact-top {

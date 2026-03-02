@@ -152,7 +152,43 @@
         <!-- Division 1 -->
         <div class="division-card" data-reveal>
           <div class="division-art-container">
-            <img src="assets/art-globe.png" alt="Token Economy Art" class="division-art">
+            <svg class="division-svg" viewBox="0 0 400 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Dashed diamond guides -->
+              <path d="M200 20 L360 120 L200 220 L40 120 Z" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="6 5"/>
+              <path d="M200 140 L360 240 L200 340 L40 240 Z" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="6 5"/>
+
+              <!-- Coin 3 (bottom) -->
+              <ellipse cx="200" cy="260" rx="90" ry="32" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.25)" stroke-width="2" class="svg-draw delay-2"/>
+              <path d="M110 250 L110 260" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+              <path d="M290 250 L290 260" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+              <ellipse cx="200" cy="250" rx="90" ry="32" fill="rgba(16,51,65,0.8)" stroke="rgba(255,255,255,0.3)" stroke-width="2" class="svg-draw delay-2"/>
+
+              <!-- Coin 2 (middle) - GOLD FILL -->
+              <path d="M110 190 L110 205" stroke="var(--gold)" stroke-width="2" opacity="0.4"/>
+              <path d="M290 190 L290 205" stroke="var(--gold)" stroke-width="2" opacity="0.4"/>
+              <ellipse cx="200" cy="205" rx="90" ry="32" fill="rgba(239,175,66,0.06)" stroke="var(--gold)" stroke-width="2" opacity="0.5" class="svg-draw delay-1"/>
+              <ellipse cx="200" cy="190" rx="90" ry="32" fill="rgba(239,175,66,0.12)" stroke="var(--gold)" stroke-width="2.5" class="svg-draw delay-1 svg-pulse"/>
+              <!-- Gold coin face detail -->
+              <rect x="170" y="178" width="60" height="24" rx="12" fill="var(--gold)" opacity="0.2"/>
+              <line x1="180" y1="188" x2="220" y2="188" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+              <line x1="185" y1="195" x2="215" y2="195" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+
+              <!-- Coin 1 (top) -->
+              <path d="M110 125 L110 140" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+              <path d="M290 125 L290 140" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+              <ellipse cx="200" cy="140" rx="90" ry="32" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+              <ellipse cx="200" cy="125" rx="90" ry="32" fill="rgba(16,51,65,0.9)" stroke="rgba(255,255,255,0.35)" stroke-width="2.5" class="svg-draw"/>
+
+              <!-- Floating gold data chip -->
+              <g class="svg-float">
+                <rect x="128" y="85" width="32" height="24" rx="5" fill="var(--gold)" opacity="0.85"/>
+                <line x1="134" y1="93" x2="154" y2="93" stroke="var(--navy-deepest)" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="134" y1="100" x2="148" y2="100" stroke="var(--navy-deepest)" stroke-width="2" stroke-linecap="round"/>
+              </g>
+
+              <!-- Orbiting dot -->
+              <circle cx="310" cy="155" r="3" fill="var(--gold)" opacity="0.6" class="svg-orbit"/>
+            </svg>
           </div>
           <div class="division-content">
             <div class="division-index">01</div>
@@ -169,7 +205,50 @@
         <!-- Division 2 -->
         <div class="division-card" data-reveal>
           <div class="division-art-container">
-            <img src="assets/art-sphere.png" alt="Liquidity Strategy Art" class="division-art">
+            <svg class="division-svg" viewBox="0 0 400 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Dashed hexagon guide -->
+              <path d="M200 25 L345 95 L345 255 L200 325 L55 255 L55 95 Z" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="6 5"/>
+
+              <!-- Node 1 (top) -->
+              <circle cx="200" cy="85" r="24" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.4)" stroke-width="2.5" class="svg-draw"/>
+              <circle cx="200" cy="85" r="8" fill="rgba(255,255,255,0.25)"/>
+
+              <!-- Node 2 (bottom-left) -->
+              <circle cx="110" cy="260" r="24" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.35)" stroke-width="2.5" class="svg-draw delay-1"/>
+              <circle cx="110" cy="260" r="8" fill="rgba(255,255,255,0.2)"/>
+
+              <!-- Node 3 (bottom-right) -->
+              <circle cx="290" cy="260" r="24" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.35)" stroke-width="2.5" class="svg-draw delay-1"/>
+              <circle cx="290" cy="260" r="8" fill="rgba(255,255,255,0.2)"/>
+
+              <!-- Flow pipes (thick) -->
+              <path d="M200 109 Q155 175 110 236" stroke="rgba(255,255,255,0.2)" stroke-width="2.5" fill="none" class="svg-draw delay-2"/>
+              <path d="M200 109 Q245 175 290 236" stroke="rgba(255,255,255,0.2)" stroke-width="2.5" fill="none" class="svg-draw delay-2"/>
+              <path d="M134 260 L266 260" stroke="rgba(255,255,255,0.2)" stroke-width="2.5" fill="none" class="svg-draw delay-2"/>
+
+              <!-- Animated flow particle on left pipe -->
+              <circle r="4" fill="var(--gold)" opacity="0.9">
+                <animateMotion dur="3s" repeatCount="indefinite" path="M200 109 Q155 175 110 236"/>
+              </circle>
+              <!-- Animated flow particle on right pipe -->
+              <circle r="4" fill="var(--gold)" opacity="0.7">
+                <animateMotion dur="3.5s" repeatCount="indefinite" path="M200 109 Q245 175 290 236" begin="0.8s"/>
+              </circle>
+              <!-- Animated flow particle on bottom pipe -->
+              <circle r="3.5" fill="var(--gold)" opacity="0.6">
+                <animateMotion dur="2.5s" repeatCount="indefinite" path="M134 260 L266 260" begin="1.5s"/>
+              </circle>
+
+              <!-- Central gold diamond -->
+              <path d="M200 155 L230 180 L200 205 L170 180 Z" fill="var(--gold)" opacity="0.15" class="svg-pulse"/>
+              <path d="M200 160 L225 180 L200 200 L175 180 Z" fill="var(--gold)" opacity="0.25" stroke="var(--gold)" stroke-width="2" class="svg-pulse"/>
+              <!-- Arrow inside diamond -->
+              <path d="M192 185 L200 170 L208 185" stroke="var(--navy-deepest)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <line x1="200" y1="170" x2="200" y2="192" stroke="var(--navy-deepest)" stroke-width="2.5" stroke-linecap="round"/>
+
+              <!-- Center ellipse ring -->
+              <ellipse cx="200" cy="180" rx="65" ry="25" stroke="var(--gold)" stroke-width="1.5" opacity="0.25" stroke-dasharray="4 3" class="svg-spin"/>
+            </svg>
           </div>
           <div class="division-content">
             <div class="division-index">02</div>
@@ -186,7 +265,40 @@
         <!-- Division 3 -->
         <div class="division-card" data-reveal>
           <div class="division-art-container">
-            <img src="assets/art-network.png" alt="Engineering Art" class="division-art">
+            <svg class="division-svg" viewBox="0 0 400 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Dashed diamond guide -->
+              <path d="M200 30 L350 130 L200 230 L50 130 Z" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="6 5"/>
+
+              <!-- Bottom cube -->
+              <path d="M130 230 L200 265 L270 230 L200 195 Z" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.2)" stroke-width="2" class="svg-draw delay-2"/>
+              <path d="M130 230 L130 265 L200 300 L200 265" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.15)" stroke-width="2" class="svg-draw delay-2"/>
+              <path d="M270 230 L270 265 L200 300 L200 265" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.15)" stroke-width="2" class="svg-draw delay-2"/>
+
+              <!-- Middle cube -->
+              <path d="M145 170 L200 200 L255 170 L200 140 Z" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.3)" stroke-width="2" class="svg-draw delay-1"/>
+              <path d="M145 170 L145 200 L200 230 L200 200" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.2)" stroke-width="2" class="svg-draw delay-1"/>
+              <path d="M255 170 L255 200 L200 230 L200 200" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.2)" stroke-width="2" class="svg-draw delay-1"/>
+
+              <!-- Top cube - GOLD HIGHLIGHTED -->
+              <path d="M165 110 L200 128 L235 110 L200 92 Z" fill="rgba(239,175,66,0.2)" stroke="var(--gold)" stroke-width="2.5" class="svg-draw svg-pulse"/>
+              <path d="M165 110 L165 135 L200 153 L200 128" fill="rgba(239,175,66,0.08)" stroke="var(--gold)" stroke-width="2" opacity="0.6" class="svg-draw"/>
+              <path d="M235 110 L235 135 L200 153 L200 128" fill="rgba(239,175,66,0.12)" stroke="var(--gold)" stroke-width="2" opacity="0.6" class="svg-draw"/>
+
+              <!-- Network connection lines with animated dots -->
+              <line x1="255" y1="170" x2="325" y2="140" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" stroke-dasharray="4 4" class="svg-draw delay-2"/>
+              <circle cx="330" cy="137" r="5" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+
+              <line x1="145" y1="170" x2="80" y2="190" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" stroke-dasharray="4 4" class="svg-draw delay-2"/>
+              <circle cx="75" cy="192" r="5" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+
+              <line x1="235" y1="110" x2="310" y2="78" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" stroke-dasharray="4 4" class="svg-draw delay-2"/>
+              <circle cx="315" cy="75" r="5" fill="var(--gold)" opacity="0.7" class="svg-pulse"/>
+
+              <!-- Animated orbiting particle -->
+              <circle r="3.5" fill="var(--gold)" opacity="0.8">
+                <animateMotion dur="4s" repeatCount="indefinite" path="M200 92 L235 110 L255 170 L270 230 L200 265 L130 230 L145 170 L165 110 Z"/>
+              </circle>
+            </svg>
           </div>
           <div class="division-content">
             <div class="division-index">03</div>
@@ -289,23 +401,48 @@
        ═══════════════════════════════════════════ -->
   <section id="contact">
     <div class="section-container">
-      <div class="section-header" data-reveal>
-        <span class="section-label">03</span>
-        <h2 class="section-title">Contact</h2>
-        <div class="section-line"></div>
+
+      <!-- Glassmorphism Contact Form Card -->
+      <div class="contact-glass-card" data-reveal>
+        <h2 class="contact-title">GET IN TOUCH</h2>
+        <p class="contact-subtitle">
+          Reach out to us today and discover how Helios Labs can
+          drive your business forward.
+        </p>
+
+        <form class="contact-form" onsubmit="return false;">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" placeholder="Your name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="your@email.com" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" placeholder="+1 (000) 000-0000" />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" placeholder="How can we help?" />
+            </div>
+          </div>
+          <div class="form-group form-group-full">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="Tell us about your project..."></textarea>
+          </div>
+          <button type="submit" class="contact-submit-btn">SUBMIT YOUR REQUEST</button>
+        </form>
       </div>
 
-      <div class="contact-top" data-reveal>
-        <div class="contact-email-block">
-          <span class="contact-label">Email</span>
-          <a href="mailto:harry@helioslabs.com" class="contact-email-link">harry@helioslabs.com</a>
-        </div>
-      </div>
-
-      <div class="offices-section">
+      <!-- Office Info Below -->
+      <div class="offices-section" style="margin-top: var(--space-2xl);">
         <h3 class="offices-section-title" data-reveal>Headquarters</h3>
         <div class="offices-grid offices-grid-single">
-          <!-- Seoul -->
           <div class="office-card" data-reveal>
             <div class="office-city-row">
               <div class="office-dot"></div>
@@ -319,7 +456,6 @@
       <div class="offices-section">
         <h3 class="offices-section-title" data-reveal>Global Partners</h3>
         <div class="offices-grid">
-          <!-- Hong Kong -->
           <div class="office-card" data-reveal>
             <div class="office-city-row">
               <div class="office-dot office-dot-partner"></div>
@@ -327,7 +463,6 @@
             </div>
             <p>100 Cyberport Road,<br />Pok Fu Lam,<br />Hong Kong</p>
           </div>
-          <!-- San Jose -->
           <div class="office-card" data-reveal>
             <div class="office-city-row">
               <div class="office-dot office-dot-partner"></div>
@@ -335,7 +470,6 @@
             </div>
             <p>99 South Almaden Boulevard,<br />San Jose, CA 95113,<br />United States</p>
           </div>
-          <!-- Dubai -->
           <div class="office-card" data-reveal>
             <div class="office-city-row">
               <div class="office-dot office-dot-partner"></div>
@@ -345,6 +479,7 @@
           </div>
         </div>
       </div>
+
     </div>
   </section>
 
