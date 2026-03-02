@@ -6,10 +6,10 @@
 /* --- Design Tokens --- */
 :root {
   /* Primary Palette — Ocean Teal / Navy (#103341 based) */
-  --navy-deepest: #071922;
-  --navy-deep: #0a2430;
-  --navy-mid: #103341;
-  --navy-light: #164658;
+  --navy-deepest: #030712;
+  --navy-deep: #0B1324;
+  --navy-mid: #111C33;
+  --navy-light: #1A2B4C;
   --navy-surface: #103341;
 
   /* Gold Spectrum — Amber Gold */
