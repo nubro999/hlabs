@@ -7,7 +7,7 @@
   <meta name="description" content="Helios Labs is a global institutional-grade Web3 financial strategy group for the AI-driven economy. We architect token economies, engineer liquidity systems, and position digital assets for global markets." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -79,55 +79,115 @@
     <div class="narrative-bg-lines"></div>
     <div class="section-container">
       
-      <div class="narrative-grid-v2">
+      <div class="narrative-rows">
         
-        <!-- Left: Massive glowing circular artwork -->
-        <div class="narrative-visual" data-reveal>
-          <div class="circular-art-mask">
-            <img src="assets/helios-assets-bg.png" alt="Helios Financial Architecture" class="narrative-art-img" />
+        <!-- Row 1: Text Left, Art Right -->
+        <div class="narrative-row">
+          <div class="narrative-content" data-reveal>
+            <div class="micro-label">HELIOS LABS</div>
+            <h2 class="narrative-headline-v2">ILLUMINATING<br>THE FUTURE OF FINANCE</h2>
+            
+            <p class="narrative-lead-v2">
+              Institutional-Grade Strategy for Web3 Capital in the AI Era
+            </p>
+
+            <p class="narrative-body-v2">
+              We architect token economies, engineer liquidity systems,<br>and position digital assets for global markets.
+            </p>
+
+            <p class="narrative-body-v2">
+              In the AI era, capital is no longer static.<br>
+              It is programmable, decentralized, and globally liquid.<br>
+              Helios Labs designs the architecture behind this transformation.
+            </p>
           </div>
-          <div class="circular-ambient-glow"></div>
+          
+          <div class="narrative-visual" data-reveal>
+            <svg viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg" class="wireframe-art">
+              <!-- Grid layers -->
+              <g class="wg-frames">
+                <polygon points="40,200 160,100 160,300 40,400" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+                <polygon points="80,200 200,100 200,300 80,400" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+                <polygon points="120,200 240,100 240,300 120,400" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/>
+                <polygon points="160,200 280,100 280,300 160,400" stroke="rgba(255,255,255,0.45)" stroke-width="1.5"/>
+              </g>
+              <!-- Dense Cube Core -->
+              <g class="wg-cube" transform="translate(200, 0)">
+                <!-- Back face -->
+                <polygon points="200,200 320,100 320,300 200,400" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+                <!-- Dense connecting lines along X -->
+                <!-- A mesh of horizontal/diagonal lines -->
+                <path d="M0,200 L200,200 M0,400 L200,400 M120,100 L320,100 M120,300 L320,300" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/>
+                <path d="M10,200 L130,100 M30,200 L150,100 M50,200 L170,100 M70,200 L190,100 M90,200 L210,100 M110,200 L230,100 M130,200 L250,100 M150,200 L270,100 M170,200 L290,100 M190,200 L310,100" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+                <path d="M10,400 L130,300 M30,400 L150,300 M50,400 L170,300 M70,400 L190,300 M90,400 L210,300 M110,400 L230,300 M130,400 L250,300 M150,400 L270,300 M170,400 L290,300 M190,400 L310,300" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+                <!-- Front face and vertical lines -->
+                <polygon points="0,200 120,100 120,300 0,400" stroke="var(--gold)" stroke-width="2" fill="rgba(239, 175, 66, 0.05)" class="svg-pulse" style="transform-origin: 60px 250px;"/>
+                <path d="M10,200 L10,400 M20,200 L20,400 M30,200 L30,400 M40,200 L40,400 M50,200 L50,400 M60,200 L60,400 M70,200 L70,400 M80,200 L80,400 M90,200 L90,400 M100,200 L100,400 M110,200 L110,400" stroke="rgba(255,255,255,0.8)" stroke-width="1.5"/>
+                <path d="M120,100 L120,300" stroke="var(--gold)" stroke-width="2"/>
+              </g>
+            </svg>
+          </div>
         </div>
 
-        <!-- Right: Text Content -->
-        <div class="narrative-content" data-reveal>
-          <div class="micro-label">HELIOS LABS</div>
-          <h2 class="narrative-headline-v2">ILLUMINATING<br>THE FUTURE OF FINANCE</h2>
-          
-          <p class="narrative-lead-v2">
-            Institutional-Grade Strategy for Web3 Capital in the AI Era
-          </p>
+        <!-- Row 2: Art Left, Text Right -->
+        <div class="narrative-row narrative-row-reverse" style="margin-top: var(--space-3xl);">
+          <div class="narrative-visual" data-reveal>
+            <svg viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg" class="wireframe-art">
+               <!-- Central Network Line -->
+               <path d="M 0 200 L 600 200" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-dasharray="8 4" />
+               <path d="M 0 220 L 600 220" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" />
+               
+               <!-- Data Nodes (Floating Isometric Squares) -->
+               <g transform="translate(60, 200) rotate(15) skewX(-20)">
+                 <g class="svg-float" style="animation-delay: 0s;">
+                   <rect x="-80" y="-80" width="160" height="160" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+                 </g>
+               </g>
+               <g transform="translate(160, 200) rotate(15) skewX(-20)">
+                 <g class="svg-float" style="animation-delay: 0.5s;">
+                   <rect x="-80" y="-80" width="160" height="160" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+                 </g>
+               </g>
+               <g transform="translate(280, 200) rotate(15) skewX(-20)">
+                 <g class="svg-pulse">
+                   <rect x="-100" y="-100" width="200" height="200" stroke="var(--gold)" stroke-width="2.5" fill="rgba(239, 175, 66, 0.05)"/>
+                 </g>
+               </g>
+               <g transform="translate(420, 200) rotate(15) skewX(-20)">
+                 <g class="svg-float" style="animation-delay: 1s;">
+                   <rect x="-80" y="-80" width="160" height="160" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+                 </g>
+               </g>
+               <g transform="translate(520, 200) rotate(15) skewX(-20)">
+                 <g class="svg-float" style="animation-delay: 1.5s;">
+                   <rect x="-70" y="-70" width="140" height="140" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+                 </g>
+               </g>
+            </svg>
+          </div>
 
-          <p class="narrative-body-v2">
-            We architect token economies, engineer liquidity systems, and position digital assets for global markets.
-          </p>
+          <div class="narrative-content" data-reveal>
+            <p class="narrative-body-v2" style="margin-bottom: 0.5rem;">We operate at the intersection of:</p>
+            <ul class="narrative-list-v2">
+              <li>Web3 protocol economics</li>
+              <li>Global liquidity networks</li>
+              <li>AI-native financial systems</li>
+              <li>Institutional finance</li>
+            </ul>
 
-          <p class="narrative-body-v2">
-            In the AI era, capital is no longer static.<br>
-            It is programmable, decentralized, and globally liquid.<br>
-            Helios Labs designs the architecture behind this transformation.
-          </p>
-
-          <p class="narrative-body-v2" style="margin-bottom: 0.5rem;">We operate at the intersection of:</p>
-          <ul class="narrative-list-v2">
-            <li>Web3 protocol economics</li>
-            <li>Global liquidity networks</li>
-            <li>AI-native financial systems</li>
-            <li>Institutional finance</li>
-          </ul>
-          
-          <div class="manifesto-mini">
-            <div class="manifesto-mini-row">
-              <span class="cross">Helios Labs does not advise projects.</span>
-              <span class="check">We architect financial systems.</span>
-            </div>
-            <div class="manifesto-mini-row">
-              <span class="cross">We do not position tokens.</span>
-              <span class="check">We structure institutional-grade digital assets.</span>
-            </div>
-            <div class="manifesto-mini-row">
-              <span class="cross">We do not follow markets.</span>
-              <span class="check">We design the capital logic behind them.</span>
+            <div class="manifesto-mini" style="margin-top: var(--space-lg);">
+              <div class="manifesto-mini-row">
+                <span class="cross">Helios Labs does not advise projects.</span>
+                <span class="check">We architect financial systems.</span>
+              </div>
+              <div class="manifesto-mini-row">
+                <span class="cross">We do not position tokens.</span>
+                <span class="check">We structure institutional-grade digital assets.</span>
+              </div>
+              <div class="manifesto-mini-row">
+                <span class="cross">We do not follow markets.</span>
+                <span class="check">We design the capital logic behind them.</span>
+              </div>
             </div>
           </div>
         </div>
@@ -153,41 +213,32 @@
         <div class="division-card" data-reveal>
           <div class="division-art-container">
             <svg class="division-svg" viewBox="0 0 400 360" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Dashed diamond guides -->
-              <path d="M200 20 L360 120 L200 220 L40 120 Z" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="6 5"/>
-              <path d="M200 140 L360 240 L200 340 L40 240 Z" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="6 5"/>
-
               <!-- Coin 3 (bottom) -->
-              <ellipse cx="200" cy="260" rx="90" ry="32" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.25)" stroke-width="2" class="svg-draw delay-2"/>
-              <path d="M110 250 L110 260" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
-              <path d="M290 250 L290 260" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
-              <ellipse cx="200" cy="250" rx="90" ry="32" fill="rgba(16,51,65,0.8)" stroke="rgba(255,255,255,0.3)" stroke-width="2" class="svg-draw delay-2"/>
+              <ellipse cx="200" cy="265" rx="95" ry="34" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.35)" stroke-width="2.5"/>
+              <path d="M105 250 L105 265" stroke="rgba(255,255,255,0.25)" stroke-width="2.5"/>
+              <path d="M295 250 L295 265" stroke="rgba(255,255,255,0.25)" stroke-width="2.5"/>
+              <ellipse cx="200" cy="250" rx="95" ry="34" fill="rgba(16,51,65,0.9)" stroke="rgba(255,255,255,0.4)" stroke-width="2.5"/>
 
-              <!-- Coin 2 (middle) - GOLD FILL -->
-              <path d="M110 190 L110 205" stroke="var(--gold)" stroke-width="2" opacity="0.4"/>
-              <path d="M290 190 L290 205" stroke="var(--gold)" stroke-width="2" opacity="0.4"/>
-              <ellipse cx="200" cy="205" rx="90" ry="32" fill="rgba(239,175,66,0.06)" stroke="var(--gold)" stroke-width="2" opacity="0.5" class="svg-draw delay-1"/>
-              <ellipse cx="200" cy="190" rx="90" ry="32" fill="rgba(239,175,66,0.12)" stroke="var(--gold)" stroke-width="2.5" class="svg-draw delay-1 svg-pulse"/>
-              <!-- Gold coin face detail -->
-              <rect x="170" y="178" width="60" height="24" rx="12" fill="var(--gold)" opacity="0.2"/>
-              <line x1="180" y1="188" x2="220" y2="188" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
-              <line x1="185" y1="195" x2="215" y2="195" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+              <!-- Coin 2 (middle) - GOLD -->
+              <path d="M105 185 L105 205" stroke="var(--gold)" stroke-width="3" opacity="0.7"/>
+              <path d="M295 185 L295 205" stroke="var(--gold)" stroke-width="3" opacity="0.7"/>
+              <ellipse cx="200" cy="205" rx="95" ry="34" fill="rgba(239,175,66,0.1)" stroke="var(--gold)" stroke-width="2.5" opacity="0.6"/>
+              <ellipse cx="200" cy="185" rx="95" ry="34" fill="rgba(239,175,66,0.2)" stroke="var(--gold)" stroke-width="3" class="svg-pulse"/>
+              <!-- $ symbol on coin -->
+              <text x="200" y="194" text-anchor="middle" font-family="var(--font-body)" font-size="28" font-weight="700" fill="var(--gold)" opacity="0.7">$</text>
 
               <!-- Coin 1 (top) -->
-              <path d="M110 125 L110 140" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
-              <path d="M290 125 L290 140" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
-              <ellipse cx="200" cy="140" rx="90" ry="32" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
-              <ellipse cx="200" cy="125" rx="90" ry="32" fill="rgba(16,51,65,0.9)" stroke="rgba(255,255,255,0.35)" stroke-width="2.5" class="svg-draw"/>
+              <path d="M105 120 L105 140" stroke="rgba(255,255,255,0.3)" stroke-width="2.5"/>
+              <path d="M295 120 L295 140" stroke="rgba(255,255,255,0.3)" stroke-width="2.5"/>
+              <ellipse cx="200" cy="140" rx="95" ry="34" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.3)" stroke-width="2.5"/>
+              <ellipse cx="200" cy="120" rx="95" ry="34" fill="rgba(16,51,65,0.95)" stroke="rgba(255,255,255,0.5)" stroke-width="3"/>
 
-              <!-- Floating gold data chip -->
+              <!-- Floating gold chip -->
               <g class="svg-float">
-                <rect x="128" y="85" width="32" height="24" rx="5" fill="var(--gold)" opacity="0.85"/>
-                <line x1="134" y1="93" x2="154" y2="93" stroke="var(--navy-deepest)" stroke-width="2.5" stroke-linecap="round"/>
-                <line x1="134" y1="100" x2="148" y2="100" stroke="var(--navy-deepest)" stroke-width="2" stroke-linecap="round"/>
+                <rect x="115" y="72" width="40" height="28" rx="6" fill="var(--gold)" opacity="0.9"/>
+                <line x1="122" y1="82" x2="148" y2="82" stroke="var(--navy-deepest)" stroke-width="3" stroke-linecap="round"/>
+                <line x1="122" y1="90" x2="140" y2="90" stroke="var(--navy-deepest)" stroke-width="2.5" stroke-linecap="round"/>
               </g>
-
-              <!-- Orbiting dot -->
-              <circle cx="310" cy="155" r="3" fill="var(--gold)" opacity="0.6" class="svg-orbit"/>
             </svg>
           </div>
           <div class="division-content">
@@ -206,48 +257,39 @@
         <div class="division-card" data-reveal>
           <div class="division-art-container">
             <svg class="division-svg" viewBox="0 0 400 360" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Dashed hexagon guide -->
-              <path d="M200 25 L345 95 L345 255 L200 325 L55 255 L55 95 Z" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="6 5"/>
-
               <!-- Node 1 (top) -->
-              <circle cx="200" cy="85" r="24" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.4)" stroke-width="2.5" class="svg-draw"/>
-              <circle cx="200" cy="85" r="8" fill="rgba(255,255,255,0.25)"/>
+              <circle cx="200" cy="75" r="30" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.5)" stroke-width="3"/>
+              <circle cx="200" cy="75" r="10" fill="rgba(255,255,255,0.4)"/>
 
               <!-- Node 2 (bottom-left) -->
-              <circle cx="110" cy="260" r="24" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.35)" stroke-width="2.5" class="svg-draw delay-1"/>
-              <circle cx="110" cy="260" r="8" fill="rgba(255,255,255,0.2)"/>
+              <circle cx="100" cy="270" r="30" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.45)" stroke-width="3"/>
+              <circle cx="100" cy="270" r="10" fill="rgba(255,255,255,0.35)"/>
 
               <!-- Node 3 (bottom-right) -->
-              <circle cx="290" cy="260" r="24" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.35)" stroke-width="2.5" class="svg-draw delay-1"/>
-              <circle cx="290" cy="260" r="8" fill="rgba(255,255,255,0.2)"/>
+              <circle cx="300" cy="270" r="30" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.45)" stroke-width="3"/>
+              <circle cx="300" cy="270" r="10" fill="rgba(255,255,255,0.35)"/>
 
-              <!-- Flow pipes (thick) -->
-              <path d="M200 109 Q155 175 110 236" stroke="rgba(255,255,255,0.2)" stroke-width="2.5" fill="none" class="svg-draw delay-2"/>
-              <path d="M200 109 Q245 175 290 236" stroke="rgba(255,255,255,0.2)" stroke-width="2.5" fill="none" class="svg-draw delay-2"/>
-              <path d="M134 260 L266 260" stroke="rgba(255,255,255,0.2)" stroke-width="2.5" fill="none" class="svg-draw delay-2"/>
+              <!-- Thick connection pipes -->
+              <path d="M200 105 Q150 180 100 240" stroke="rgba(255,255,255,0.35)" stroke-width="3" fill="none"/>
+              <path d="M200 105 Q250 180 300 240" stroke="rgba(255,255,255,0.35)" stroke-width="3" fill="none"/>
+              <path d="M130 270 L270 270" stroke="rgba(255,255,255,0.35)" stroke-width="3" fill="none"/>
 
-              <!-- Animated flow particle on left pipe -->
-              <circle r="4" fill="var(--gold)" opacity="0.9">
-                <animateMotion dur="3s" repeatCount="indefinite" path="M200 109 Q155 175 110 236"/>
+              <!-- Animated gold particles flowing -->
+              <circle r="5" fill="var(--gold)" opacity="0.9">
+                <animateMotion dur="2.5s" repeatCount="indefinite" path="M200 105 Q150 180 100 240"/>
               </circle>
-              <!-- Animated flow particle on right pipe -->
+              <circle r="5" fill="var(--gold)" opacity="0.8">
+                <animateMotion dur="3s" repeatCount="indefinite" path="M200 105 Q250 180 300 240" begin="0.6s"/>
+              </circle>
               <circle r="4" fill="var(--gold)" opacity="0.7">
-                <animateMotion dur="3.5s" repeatCount="indefinite" path="M200 109 Q245 175 290 236" begin="0.8s"/>
-              </circle>
-              <!-- Animated flow particle on bottom pipe -->
-              <circle r="3.5" fill="var(--gold)" opacity="0.6">
-                <animateMotion dur="2.5s" repeatCount="indefinite" path="M134 260 L266 260" begin="1.5s"/>
+                <animateMotion dur="2s" repeatCount="indefinite" path="M130 270 L270 270" begin="1.2s"/>
               </circle>
 
-              <!-- Central gold diamond -->
-              <path d="M200 155 L230 180 L200 205 L170 180 Z" fill="var(--gold)" opacity="0.15" class="svg-pulse"/>
-              <path d="M200 160 L225 180 L200 200 L175 180 Z" fill="var(--gold)" opacity="0.25" stroke="var(--gold)" stroke-width="2" class="svg-pulse"/>
-              <!-- Arrow inside diamond -->
-              <path d="M192 185 L200 170 L208 185" stroke="var(--navy-deepest)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <line x1="200" y1="170" x2="200" y2="192" stroke="var(--navy-deepest)" stroke-width="2.5" stroke-linecap="round"/>
-
-              <!-- Center ellipse ring -->
-              <ellipse cx="200" cy="180" rx="65" ry="25" stroke="var(--gold)" stroke-width="1.5" opacity="0.25" stroke-dasharray="4 3" class="svg-spin"/>
+              <!-- Center gold diamond -->
+              <path d="M200 148 L240 180 L200 212 L160 180 Z" fill="var(--gold)" opacity="0.35" stroke="var(--gold)" stroke-width="3" class="svg-pulse"/>
+              <!-- Arrow icon -->
+              <path d="M189 190 L200 168 L211 190" stroke="var(--navy-deepest)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <line x1="200" y1="168" x2="200" y2="198" stroke="var(--navy-deepest)" stroke-width="3.5" stroke-linecap="round"/>
             </svg>
           </div>
           <div class="division-content">
@@ -266,37 +308,34 @@
         <div class="division-card" data-reveal>
           <div class="division-art-container">
             <svg class="division-svg" viewBox="0 0 400 360" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Dashed diamond guide -->
-              <path d="M200 30 L350 130 L200 230 L50 130 Z" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="6 5"/>
-
               <!-- Bottom cube -->
-              <path d="M130 230 L200 265 L270 230 L200 195 Z" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.2)" stroke-width="2" class="svg-draw delay-2"/>
-              <path d="M130 230 L130 265 L200 300 L200 265" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.15)" stroke-width="2" class="svg-draw delay-2"/>
-              <path d="M270 230 L270 265 L200 300 L200 265" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.15)" stroke-width="2" class="svg-draw delay-2"/>
+              <path d="M125 235 L200 275 L275 235 L200 195 Z" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.3)" stroke-width="2.5"/>
+              <path d="M125 235 L125 275 L200 315 L200 275" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.2)" stroke-width="2.5"/>
+              <path d="M275 235 L275 275 L200 315 L200 275" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.2)" stroke-width="2.5"/>
 
               <!-- Middle cube -->
-              <path d="M145 170 L200 200 L255 170 L200 140 Z" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.3)" stroke-width="2" class="svg-draw delay-1"/>
-              <path d="M145 170 L145 200 L200 230 L200 200" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.2)" stroke-width="2" class="svg-draw delay-1"/>
-              <path d="M255 170 L255 200 L200 230 L200 200" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.2)" stroke-width="2" class="svg-draw delay-1"/>
+              <path d="M140 170 L200 205 L260 170 L200 135 Z" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.4)" stroke-width="2.5"/>
+              <path d="M140 170 L140 205 L200 240 L200 205" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.3)" stroke-width="2.5"/>
+              <path d="M260 170 L260 205 L200 240 L200 205" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.3)" stroke-width="2.5"/>
 
-              <!-- Top cube - GOLD HIGHLIGHTED -->
-              <path d="M165 110 L200 128 L235 110 L200 92 Z" fill="rgba(239,175,66,0.2)" stroke="var(--gold)" stroke-width="2.5" class="svg-draw svg-pulse"/>
-              <path d="M165 110 L165 135 L200 153 L200 128" fill="rgba(239,175,66,0.08)" stroke="var(--gold)" stroke-width="2" opacity="0.6" class="svg-draw"/>
-              <path d="M235 110 L235 135 L200 153 L200 128" fill="rgba(239,175,66,0.12)" stroke="var(--gold)" stroke-width="2" opacity="0.6" class="svg-draw"/>
+              <!-- Top cube - GOLD -->
+              <path d="M160 105 L200 125 L240 105 L200 85 Z" fill="rgba(239,175,66,0.3)" stroke="var(--gold)" stroke-width="3" class="svg-pulse"/>
+              <path d="M160 105 L160 135 L200 155 L200 125" fill="rgba(239,175,66,0.12)" stroke="var(--gold)" stroke-width="2.5" opacity="0.8"/>
+              <path d="M240 105 L240 135 L200 155 L200 125" fill="rgba(239,175,66,0.18)" stroke="var(--gold)" stroke-width="2.5" opacity="0.8"/>
 
-              <!-- Network connection lines with animated dots -->
-              <line x1="255" y1="170" x2="325" y2="140" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" stroke-dasharray="4 4" class="svg-draw delay-2"/>
-              <circle cx="330" cy="137" r="5" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+              <!-- Network lines -->
+              <line x1="260" y1="170" x2="330" y2="138" stroke="rgba(255,255,255,0.3)" stroke-width="2" stroke-dasharray="5 4"/>
+              <circle cx="335" cy="135" r="6" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.45)" stroke-width="2"/>
 
-              <line x1="145" y1="170" x2="80" y2="190" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" stroke-dasharray="4 4" class="svg-draw delay-2"/>
-              <circle cx="75" cy="192" r="5" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+              <line x1="140" y1="170" x2="75" y2="192" stroke="rgba(255,255,255,0.3)" stroke-width="2" stroke-dasharray="5 4"/>
+              <circle cx="70" cy="195" r="6" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.45)" stroke-width="2"/>
 
-              <line x1="235" y1="110" x2="310" y2="78" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" stroke-dasharray="4 4" class="svg-draw delay-2"/>
-              <circle cx="315" cy="75" r="5" fill="var(--gold)" opacity="0.7" class="svg-pulse"/>
+              <line x1="240" y1="105" x2="315" y2="72" stroke="rgba(255,255,255,0.2)" stroke-width="2" stroke-dasharray="5 4"/>
+              <circle cx="320" cy="69" r="6" fill="var(--gold)" opacity="0.8" class="svg-pulse"/>
 
-              <!-- Animated orbiting particle -->
-              <circle r="3.5" fill="var(--gold)" opacity="0.8">
-                <animateMotion dur="4s" repeatCount="indefinite" path="M200 92 L235 110 L255 170 L270 230 L200 265 L130 230 L145 170 L165 110 Z"/>
+              <!-- Orbiting particle -->
+              <circle r="4" fill="var(--gold)" opacity="0.85">
+                <animateMotion dur="4s" repeatCount="indefinite" path="M200 85 L240 105 L260 170 L275 235 L200 275 L125 235 L140 170 L160 105 Z"/>
               </circle>
             </svg>
           </div>
@@ -402,45 +441,8 @@
   <section id="contact">
     <div class="section-container">
 
-      <!-- Glassmorphism Contact Form Card -->
-      <div class="contact-glass-card" data-reveal>
-        <h2 class="contact-title">GET IN TOUCH</h2>
-        <p class="contact-subtitle">
-          Reach out to us today and discover how Helios Labs can
-          drive your business forward.
-        </p>
-
-        <form class="contact-form" onsubmit="return false;">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="fullName">Full Name</label>
-              <input type="text" id="fullName" placeholder="Your name" />
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" placeholder="your@email.com" />
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" placeholder="+1 (000) 000-0000" />
-            </div>
-            <div class="form-group">
-              <label for="subject">Subject</label>
-              <input type="text" id="subject" placeholder="How can we help?" />
-            </div>
-          </div>
-          <div class="form-group form-group-full">
-            <label for="message">Message</label>
-            <textarea id="message" rows="5" placeholder="Tell us about your project..."></textarea>
-          </div>
-          <button type="submit" class="contact-submit-btn">SUBMIT YOUR REQUEST</button>
-        </form>
-      </div>
-
-      <!-- Office Info Below -->
-      <div class="offices-section" style="margin-top: var(--space-2xl);">
+      <!-- Office Info Above -->
+      <div class="offices-section">
         <h3 class="offices-section-title" data-reveal>Headquarters</h3>
         <div class="offices-grid offices-grid-single">
           <div class="office-card" data-reveal>
@@ -478,6 +480,43 @@
             <p>Almas Tower,<br />Jumeirah Lakes Towers (JLT),<br />Dubai, UAE</p>
           </div>
         </div>
+      </div>
+
+      <!-- Institutional Solid Contact Form Card Near Footer -->
+      <div class="contact-glass-card" data-reveal style="margin-top: var(--space-2xl);">
+        <h2 class="contact-title">GET IN TOUCH</h2>
+        <p class="contact-subtitle">
+          Reach out to us today and discover how Helios Labs can
+          drive your business forward.
+        </p>
+
+        <form class="contact-form" onsubmit="return false;">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" placeholder="Your name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="your@email.com" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" placeholder="+1 (000) 000-0000" />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" placeholder="How can we help?" />
+            </div>
+          </div>
+          <div class="form-group form-group-full">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="Tell us about your project..."></textarea>
+          </div>
+          <button type="submit" class="contact-submit-btn">SUBMIT YOUR REQUEST</button>
+        </form>
       </div>
 
     </div>
