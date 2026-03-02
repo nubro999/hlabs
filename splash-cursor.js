@@ -809,10 +809,20 @@
     return hash;
   }
 
+  // ── Boundary: only apply cursor effect above #narrative ──
+  const boundarySection = document.getElementById('narrative');
+
+  function isAboveBoundary(clientY) {
+    if (!boundarySection) return true;
+    const boundaryTop = boundarySection.getBoundingClientRect().top;
+    return clientY < boundaryTop;
+  }
+
   // ── Event Listeners ──
   let firstMouseMoveHandled = false;
 
   window.addEventListener('mousedown', function (e) {
+    if (!isAboveBoundary(e.clientY)) return;
     let pointer = pointers[0];
     let posX = scaleByPixelRatio(e.clientX);
     let posY = scaleByPixelRatio(e.clientY);
@@ -821,6 +831,7 @@
   });
 
   window.addEventListener('mousemove', function (e) {
+    if (!isAboveBoundary(e.clientY)) return;
     let pointer = pointers[0];
     let posX = scaleByPixelRatio(e.clientX);
     let posY = scaleByPixelRatio(e.clientY);
@@ -834,6 +845,7 @@
 
   window.addEventListener('touchstart', function (e) {
     const touches = e.targetTouches;
+    if (touches.length > 0 && !isAboveBoundary(touches[0].clientY)) return;
     let pointer = pointers[0];
     for (let i = 0; i < touches.length; i++) {
       let posX = scaleByPixelRatio(touches[i].clientX);
@@ -844,6 +856,7 @@
 
   window.addEventListener('touchmove', function (e) {
     const touches = e.targetTouches;
+    if (touches.length > 0 && !isAboveBoundary(touches[0].clientY)) return;
     let pointer = pointers[0];
     for (let i = 0; i < touches.length; i++) {
       let posX = scaleByPixelRatio(touches[i].clientX);

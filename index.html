@@ -8,12 +8,9 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <!-- Particle Canvas -->
-  <canvas id="particles"></canvas>
-
   <!-- Navigation -->
   <nav id="navbar">
     <div class="nav-inner">
@@ -26,7 +23,6 @@
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#hero" class="nav-link active">Home</a></li>
-        <li><a href="#about" class="nav-link">About Us</a></li>
         <li><a href="#divisions" class="nav-link">Divisions</a></li>
         <li><a href="#ecosystem" class="nav-link">Ecosystem</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -41,6 +37,8 @@
        BOX 1 — HERO
        ═══════════════════════════════════════════ -->
   <section id="hero">
+    <!-- Particle Canvas (contained within hero) -->
+    <canvas id="particles"></canvas>
     <div class="hero-bg-grid"></div>
     <div class="hero-content">
       <div class="hero-text">
@@ -53,7 +51,7 @@
           Global Institutional-Grade Web3 Financial Strategy Group<br />
           for the AI-Driven Economy
         </p>
-        <a href="#about" class="btn-primary" data-reveal>
+        <a href="#divisions" class="btn-primary" data-reveal>
           <span>Discover Our Vision</span>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
@@ -72,74 +70,80 @@
     </div>
   </section>
 
-  <!-- Wave: Dark → Light -->
-  <div class="wave-divider wave-dark-to-light">
-    <svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,60 C360,120 1080,0 1440,60 L1440,120 L0,120 Z" fill="var(--surface-light)"/></svg>
-  </div>
+
 
   <!-- ═══════════════════════════════════════════
-       BOX 2 — ABOUT US (Light)
+       NARRATIVE & MANIFESTO
        ═══════════════════════════════════════════ -->
-  <section id="about" class="section-light">
+  <section id="narrative">
+    <div class="narrative-bg-lines"></div>
     <div class="section-container">
-      <div class="section-header" data-reveal>
-        <span class="section-label">01</span>
-        <h2 class="section-title">About Us</h2>
-        <div class="section-line"></div>
-      </div>
+      
+      <div class="narrative-grid-v2">
+        
+        <!-- Left: Massive glowing circular artwork -->
+        <div class="narrative-visual" data-reveal>
+          <div class="circular-art-mask">
+            <img src="assets/helios-assets-bg.png" alt="Helios Financial Architecture" class="narrative-art-img" />
+          </div>
+          <div class="circular-ambient-glow"></div>
+        </div>
 
-      <div class="about-hero-block" data-reveal>
-        <h3 class="about-brand-name">Helios Labs</h3>
-        <p class="about-tagline">Illuminating the Future of Finance</p>
-        <p class="about-subtitle-line">Institutional-Grade Strategy for Web3 Capital in the AI Era</p>
-      </div>
-
-      <div class="about-body-grid">
-        <div class="about-narrative" data-reveal>
-          <p class="about-lead">
-            We architect token economies, engineer liquidity systems,
-            and position digital assets for global markets.
+        <!-- Right: Text Content -->
+        <div class="narrative-content" data-reveal>
+          <div class="micro-label">HELIOS LABS</div>
+          <h2 class="narrative-headline-v2">ILLUMINATING<br>THE FUTURE OF FINANCE</h2>
+          
+          <p class="narrative-lead-v2">
+            Institutional-Grade Strategy for Web3 Capital in the AI Era
           </p>
-          <p>
-            In the AI era, capital is no longer static.
-            It is programmable, decentralized, and globally liquid.
+
+          <p class="narrative-body-v2">
+            We architect token economies, engineer liquidity systems, and position digital assets for global markets.
+          </p>
+
+          <p class="narrative-body-v2">
+            In the AI era, capital is no longer static.<br>
+            It is programmable, decentralized, and globally liquid.<br>
             Helios Labs designs the architecture behind this transformation.
           </p>
-          <p>We operate at the intersection of:</p>
-          <ul class="about-list">
+
+          <p class="narrative-body-v2" style="margin-bottom: 0.5rem;">We operate at the intersection of:</p>
+          <ul class="narrative-list-v2">
             <li>Web3 protocol economics</li>
             <li>Global liquidity networks</li>
             <li>AI-native financial systems</li>
             <li>Institutional finance</li>
           </ul>
-        </div>
-        <div class="about-manifesto" data-reveal>
-          <div class="manifesto-card">
-            <div class="manifesto-row">
-              <span class="manifesto-not">Helios Labs does not advise projects.</span>
-              <span class="manifesto-do">We architect financial systems.</span>
+          
+          <div class="manifesto-mini">
+            <div class="manifesto-mini-row">
+              <span class="cross">Helios Labs does not advise projects.</span>
+              <span class="check">We architect financial systems.</span>
             </div>
-            <div class="manifesto-row">
-              <span class="manifesto-not">We do not position tokens.</span>
-              <span class="manifesto-do">We structure institutional-grade digital assets.</span>
+            <div class="manifesto-mini-row">
+              <span class="cross">We do not position tokens.</span>
+              <span class="check">We structure institutional-grade digital assets.</span>
             </div>
-            <div class="manifesto-row">
-              <span class="manifesto-not">We do not follow markets.</span>
-              <span class="manifesto-do">We design the capital logic behind them.</span>
+            <div class="manifesto-mini-row">
+              <span class="cross">We do not follow markets.</span>
+              <span class="check">We design the capital logic behind them.</span>
             </div>
           </div>
         </div>
+
       </div>
+
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════
-       BOX 3 — CORE DIVISIONS
+       BOX 2 — CORE DIVISIONS
        ═══════════════════════════════════════════ -->
-  <section id="divisions" class="section-light">
+  <section id="divisions">
     <div class="section-container">
       <div class="section-header" data-reveal>
-        <span class="section-label">02</span>
+        <span class="section-label">01</span>
         <h2 class="section-title">Core Divisions</h2>
         <div class="section-line"></div>
       </div>
@@ -147,79 +151,57 @@
       <div class="divisions-grid">
         <!-- Division 1 -->
         <div class="division-card" data-reveal>
-          <div class="division-index">01</div>
-          <div class="division-icon">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <circle cx="20" cy="20" r="16" stroke="currentColor" stroke-width="1"/>
-              <path d="M12 20h16M20 12v16" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
-              <circle cx="20" cy="20" r="6" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2"/>
-              <circle cx="20" cy="12" r="2" fill="currentColor"/>
-              <circle cx="20" cy="28" r="2" fill="currentColor"/>
-              <circle cx="12" cy="20" r="2" fill="currentColor"/>
-              <circle cx="28" cy="20" r="2" fill="currentColor"/>
-            </svg>
+          <div class="division-art-container">
+            <img src="assets/art-globe.png" alt="Token Economy Art" class="division-art">
           </div>
-          <h3>Token Economy &<br />Capital Architecture</h3>
-          <ul class="division-list">
-            <li>Institution-ready token design</li>
-            <li>Web2 → Web3 transformation strategy</li>
-            <li>Supply engineering & post-listing sustainability</li>
-            <li>AI-aligned economic structures</li>
-          </ul>
-          <div class="division-line"></div>
+          <div class="division-content">
+            <div class="division-index">01</div>
+            <h3>Token Economy &<br />Capital Architecture</h3>
+            <ul class="division-list">
+              <li>Institution-ready token design</li>
+              <li>Web2 → Web3 transformation strategy</li>
+              <li>Supply engineering & post-listing sustainability</li>
+              <li>AI-aligned economic structures</li>
+            </ul>
+          </div>
         </div>
 
         <!-- Division 2 -->
         <div class="division-card" data-reveal>
-          <div class="division-index">02</div>
-          <div class="division-icon">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <path d="M6 30l7-10 5 4 6-12 5 6 5-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-              <rect x="4" y="6" width="32" height="28" rx="1" stroke="currentColor" stroke-width="1"/>
-              <path d="M4 10h32" stroke="currentColor" stroke-width="1"/>
-              <circle cx="8" cy="8" r="1" fill="currentColor"/>
-              <circle cx="12" cy="8" r="1" fill="currentColor"/>
-            </svg>
+          <div class="division-art-container">
+            <img src="assets/art-sphere.png" alt="Liquidity Strategy Art" class="division-art">
           </div>
-          <h3>Global Liquidity &<br />Exchange Strategy</h3>
-          <ul class="division-list">
-            <li>Exchange positioning & listing architecture</li>
-            <li>Market structure & liquidity depth modeling</li>
-            <li>Institutional capital connectivity</li>
-            <li>OTC & global liquidity coordination</li>
-          </ul>
-          <div class="division-line"></div>
+          <div class="division-content">
+            <div class="division-index">02</div>
+            <h3>Global Liquidity &<br />Exchange Strategy</h3>
+            <ul class="division-list">
+              <li>Exchange positioning & listing architecture</li>
+              <li>Market structure & liquidity depth modeling</li>
+              <li>Institutional capital connectivity</li>
+              <li>OTC & global liquidity coordination</li>
+            </ul>
+          </div>
         </div>
 
         <!-- Division 3 -->
         <div class="division-card" data-reveal>
-          <div class="division-index">03</div>
-          <div class="division-icon">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <rect x="8" y="6" width="24" height="28" rx="1" stroke="currentColor" stroke-width="1"/>
-              <path d="M14 14h12M14 18h8M14 22h10" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
-              <circle cx="30" cy="28" r="8" stroke="currentColor" stroke-width="1"/>
-              <path d="M27 28h6M30 25v6" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
-              <path d="M26 24l8 8" stroke="currentColor" stroke-width="0.8" stroke-dasharray="1.5 1.5"/>
-            </svg>
+          <div class="division-art-container">
+            <img src="assets/art-network.png" alt="Engineering Art" class="division-art">
           </div>
-          <h3>AI-Era<br />Financial Systems</h3>
-          <ul class="division-list">
-            <li>Programmable capital models</li>
-            <li>AI-native economic frameworks</li>
-            <li>RWA & stable asset integration</li>
-            <li>On-chain financial infrastructure design</li>
-          </ul>
-          <div class="division-line"></div>
+          <div class="division-content">
+            <div class="division-index">03</div>
+            <h3>AI-Era<br />Financial Systems</h3>
+            <ul class="division-list">
+              <li>Programmable capital models</li>
+              <li>AI-native economic frameworks</li>
+              <li>RWA & stable asset integration</li>
+              <li>On-chain financial infrastructure design</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- Wave: Light → Dark -->
-  <div class="wave-divider wave-light-to-dark">
-    <svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,60 C360,0 1080,120 1440,60 L1440,120 L0,120 Z" fill="var(--navy-deep)"/></svg>
-  </div>
 
   <!-- ═══════════════════════════════════════════
        BOX 4 — ECOSYSTEM
@@ -227,7 +209,7 @@
   <section id="ecosystem">
     <div class="section-container">
       <div class="section-header" data-reveal>
-        <span class="section-label">03</span>
+        <span class="section-label">02</span>
         <h2 class="section-title">Ecosystem</h2>
         <div class="section-line"></div>
       </div>
@@ -308,7 +290,7 @@
   <section id="contact">
     <div class="section-container">
       <div class="section-header" data-reveal>
-        <span class="section-label">04</span>
+        <span class="section-label">03</span>
         <h2 class="section-title">Contact</h2>
         <div class="section-line"></div>
       </div>
@@ -377,7 +359,6 @@
         <p>Illuminating the Future of Finance</p>
       </div>
       <div class="footer-links">
-        <a href="#about">About</a>
         <a href="#divisions">Divisions</a>
         <a href="#ecosystem">Ecosystem</a>
         <a href="#contact">Contact</a>
