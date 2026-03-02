@@ -33,14 +33,14 @@
   --surface-light: #F4F6F9;
   --surface-cream: #FFFFFF;
   --text-dark: #071922;
-  --text-mid: #164658;
+  --text-mid: #143d55;
   --text-muted: #718096;
   --border-light: rgba(10, 36, 48, 0.08);
   --border-light-hover: rgba(10, 36, 48, 0.25);
 
   /* Typography */
-  --font-heading: 'Bitter', Georgia, 'Times New Roman', serif;
-  --font-display: 'Cormorant Garamond', 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-heading: 'Cardo', Georgia, serif;
+  --font-display: 'Noto Serif', Georgia, serif;
   --font-body: 'Inter', 'DM Sans', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
 
   /* Spacing */
