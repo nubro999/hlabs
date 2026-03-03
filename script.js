@@ -110,3 +110,24 @@
     });
   });
 })();
+
+// ── Showcase Carousel ──
+function slideCarousel(carouselId, direction) {
+  const carousel = document.getElementById(carouselId);
+  const track = carousel.querySelector('.showcase-track');
+  const slides = track.querySelectorAll('.showcase-slide');
+  const total = slides.length;
+
+  let currentIdx = parseInt(carousel.dataset.index || '0', 10);
+  currentIdx += direction;
+
+  if (currentIdx < 0) currentIdx = total - 1;
+  if (currentIdx >= total) currentIdx = 0;
+
+  carousel.dataset.index = currentIdx;
+  track.style.transform = `translateX(-${currentIdx * 100}%)`;
+
+  slides.forEach((s, i) => {
+    s.classList.toggle('active', i === currentIdx);
+  });
+}

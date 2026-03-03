@@ -75,7 +75,6 @@
        NARRATIVE & MANIFESTO
        ═══════════════════════════════════════════ -->
   <section id="narrative">
-    <div class="narrative-bg-lines"></div>
     <div class="section-container">
       
       <div class="narrative-rows">
@@ -121,34 +120,201 @@
           </div>
 
           <div class="narrative-visual" data-reveal>
-            <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" class="wireframe-art" style="max-width: 360px;">
-              <!-- Globe -->
-              <g transform="translate(200, 200)">
-                <circle cx="0" cy="0" r="140" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" fill="none"/>
-                <circle cx="0" cy="0" r="142" stroke="rgba(255,255,255,0.08)" stroke-width="0.5" fill="none"/>
-                <ellipse cx="0" cy="0" rx="140" ry="50" stroke="rgba(255,255,255,0.12)" stroke-width="1" fill="none"/>
-                <ellipse cx="0" cy="-50" rx="120" ry="35" stroke="rgba(255,255,255,0.10)" stroke-width="1" fill="none"/>
-                <ellipse cx="0" cy="50" rx="120" ry="35" stroke="rgba(255,255,255,0.10)" stroke-width="1" fill="none"/>
-                <ellipse cx="0" cy="-90" rx="80" ry="20" stroke="rgba(255,255,255,0.08)" stroke-width="1" fill="none"/>
-                <ellipse cx="0" cy="90" rx="80" ry="20" stroke="rgba(255,255,255,0.08)" stroke-width="1" fill="none"/>
-                <ellipse cx="0" cy="0" rx="50" ry="140" stroke="rgba(255,255,255,0.15)" stroke-width="1" fill="none"/>
-                <ellipse cx="0" cy="0" rx="100" ry="140" stroke="rgba(255,255,255,0.10)" stroke-width="1" fill="none"/>
-                <line x1="0" y1="-140" x2="0" y2="140" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
-                <ellipse cx="0" cy="0" rx="140" ry="50" stroke="var(--gold)" stroke-width="1.5" fill="none" opacity="0.5"/>
-                <circle cx="-90" cy="-30" r="6" fill="var(--gold)" class="svg-pulse"/>
-                <circle cx="70" cy="-60" r="5" fill="var(--gold)" opacity="0.8" class="svg-pulse" style="animation-delay:0.3s"/>
-                <circle cx="110" cy="20" r="5" fill="rgba(255,255,255,0.8)" class="svg-pulse" style="animation-delay:0.6s"/>
-                <circle cx="-50" cy="65" r="4" fill="rgba(255,255,255,0.6)"/>
-                <circle cx="30" cy="-100" r="4" fill="var(--gold)" opacity="0.6"/>
-                <circle cx="-20" cy="30" r="4" fill="rgba(255,255,255,0.5)"/>
-                <path d="M-90,-30 Q -30,-80 70,-60" stroke="var(--gold)" stroke-width="1.5" fill="none" opacity="0.6"/>
-                <path d="M70,-60 Q 100,-20 110,20" stroke="var(--gold)" stroke-width="1" fill="none" opacity="0.4"/>
-                <path d="M-90,-30 Q -60,20 -50,65" stroke="rgba(255,255,255,0.3)" stroke-width="1" fill="none"/>
-                <path d="M110,20 Q 40,50 -50,65" stroke="rgba(255,255,255,0.2)" stroke-width="1" fill="none"/>
-                <path d="M30,-100 Q 60,-80 70,-60" stroke="rgba(255,255,255,0.25)" stroke-width="1" fill="none"/>
-                <g class="svg-spin" style="animation-duration: 30s;">
-                  <ellipse cx="0" cy="0" rx="160" ry="60" stroke="rgba(255,255,255,0.1)" stroke-width="1" fill="none" transform="rotate(-20)"/>
-                  <circle cx="155" cy="-25" r="3" fill="var(--gold)" transform="rotate(-20)"/>
+            <svg viewBox="0 0 440 440" fill="none" xmlns="http://www.w3.org/2000/svg" class="wireframe-art" style="max-width: 420px;">
+              <defs>
+                <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="2" result="blur"/>
+                  <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+              </defs>
+
+              <!-- Outer rings with breathing -->
+              <circle cx="220" cy="220" r="195" stroke="rgba(0,0,0,0.04)" stroke-width="0.5" fill="none" stroke-dasharray="2 8">
+                <animate attributeName="r" values="195;197;195" dur="6s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="220" cy="220" r="205" stroke="rgba(0,0,0,0.025)" stroke-width="0.4" fill="none" stroke-dasharray="1 12">
+                <animate attributeName="r" values="205;208;205" dur="8s" repeatCount="indefinite"/>
+              </circle>
+
+              <g transform="translate(220, 220)">
+                <!-- Globe shell -->
+                <circle cx="0" cy="0" r="155" stroke="rgba(0,0,0,0.35)" stroke-width="2" fill="none">
+                  <animate attributeName="stroke-opacity" values="0.35;0.42;0.35" dur="5s" repeatCount="indefinite"/>
+                </circle>
+
+                <!-- Rotating inner coordinate grid -->
+                <g>
+                  <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="60s" repeatCount="indefinite"/>
+                  <line x1="-145" y1="0" x2="145" y2="0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5" stroke-dasharray="4 8"/>
+                  <line x1="0" y1="-145" x2="0" y2="145" stroke="rgba(0,0,0,0.06)" stroke-width="0.5" stroke-dasharray="4 8"/>
+                  <circle cx="0" cy="0" r="80" stroke="rgba(0,0,0,0.05)" stroke-width="0.5" fill="none" stroke-dasharray="3 10"/>
+                  <circle cx="0" cy="0" r="40" stroke="rgba(0,0,0,0.04)" stroke-width="0.4" fill="none" stroke-dasharray="2 8"/>
+                </g>
+
+                <!-- Latitude lines -->
+                <ellipse cx="0" cy="0" rx="155" ry="48" stroke="rgba(0,0,0,0.18)" stroke-width="1" fill="none">
+                  <animate attributeName="stroke-opacity" values="0.18;0.24;0.18" dur="4s" repeatCount="indefinite"/>
+                </ellipse>
+                <ellipse cx="0" cy="-40" rx="142" ry="40" stroke="rgba(0,0,0,0.14)" stroke-width="0.9" fill="none">
+                  <animate attributeName="stroke-opacity" values="0.14;0.18;0.14" dur="4.5s" repeatCount="indefinite" begin="0.5s"/>
+                </ellipse>
+                <ellipse cx="0" cy="40" rx="142" ry="40" stroke="rgba(0,0,0,0.14)" stroke-width="0.9" fill="none"/>
+                <ellipse cx="0" cy="-78" rx="115" ry="30" stroke="rgba(0,0,0,0.1)" stroke-width="0.8" fill="none"/>
+                <ellipse cx="0" cy="78" rx="115" ry="30" stroke="rgba(0,0,0,0.1)" stroke-width="0.8" fill="none"/>
+                <ellipse cx="0" cy="-110" rx="75" ry="18" stroke="rgba(0,0,0,0.08)" stroke-width="0.6" fill="none"/>
+                <ellipse cx="0" cy="110" rx="75" ry="18" stroke="rgba(0,0,0,0.08)" stroke-width="0.6" fill="none"/>
+                <ellipse cx="0" cy="-138" rx="32" ry="8" stroke="rgba(0,0,0,0.06)" stroke-width="0.5" fill="none"/>
+                <ellipse cx="0" cy="138" rx="32" ry="8" stroke="rgba(0,0,0,0.06)" stroke-width="0.5" fill="none"/>
+
+                <!-- Longitude lines -->
+                <ellipse cx="0" cy="0" rx="42" ry="155" stroke="rgba(0,0,0,0.18)" stroke-width="0.9" fill="none"/>
+                <ellipse cx="0" cy="0" rx="90" ry="155" stroke="rgba(0,0,0,0.14)" stroke-width="0.8" fill="none"/>
+                <ellipse cx="0" cy="0" rx="130" ry="155" stroke="rgba(0,0,0,0.1)" stroke-width="0.7" fill="none"/>
+                <line x1="0" y1="-155" x2="0" y2="155" stroke="rgba(0,0,0,0.18)" stroke-width="0.9"/>
+
+                <!-- Gold equator with sweep highlight -->
+                <ellipse cx="0" cy="0" rx="155" ry="48" stroke="#b8860b" stroke-width="2" fill="none" opacity="0.5"/>
+                <ellipse cx="0" cy="0" rx="155" ry="48" stroke="#b8860b" stroke-width="3" fill="none" opacity="0.3" stroke-dasharray="30 280">
+                  <animate attributeName="stroke-dashoffset" from="0" to="-310" dur="8s" repeatCount="indefinite"/>
+                </ellipse>
+
+                <!-- Axis crosshair -->
+                <line x1="-168" y1="0" x2="-155" y2="0" stroke="rgba(0,0,0,0.25)" stroke-width="1.2"/>
+                <line x1="155" y1="0" x2="168" y2="0" stroke="rgba(0,0,0,0.25)" stroke-width="1.2"/>
+                <line x1="0" y1="-168" x2="0" y2="-155" stroke="rgba(0,0,0,0.25)" stroke-width="1.2"/>
+                <line x1="0" y1="155" x2="0" y2="168" stroke="rgba(0,0,0,0.25)" stroke-width="1.2"/>
+
+                <!-- Pole diamonds -->
+                <polygon points="0,-162 5,-155 0,-148 -5,-155" fill="none" stroke="rgba(0,0,0,0.25)" stroke-width="1"/>
+                <polygon points="0,162 5,155 0,148 -5,155" fill="none" stroke="rgba(0,0,0,0.2)" stroke-width="0.9"/>
+
+                <!-- Node: Seoul (primary) -->
+                <circle cx="88" cy="-48" r="5" fill="none" stroke="#b8860b" stroke-width="1.8" opacity="0.85" class="svg-pulse"/>
+                <circle cx="88" cy="-48" r="2" fill="#b8860b" opacity="0.9"/>
+                <line x1="88" y1="-56" x2="88" y2="-40" stroke="#b8860b" stroke-width="0.5" opacity="0.4"/>
+                <line x1="80" y1="-48" x2="96" y2="-48" stroke="#b8860b" stroke-width="0.5" opacity="0.4"/>
+                <!-- Expanding signal rings -->
+                <circle cx="88" cy="-48" r="5" fill="none" stroke="#b8860b" stroke-width="1" opacity="0">
+                  <animate attributeName="r" values="5;22;22" dur="3s" repeatCount="indefinite"/>
+                  <animate attributeName="opacity" values="0.3;0.05;0" dur="3s" repeatCount="indefinite"/>
+                  <animate attributeName="stroke-width" values="1;0.3;0" dur="3s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="88" cy="-48" r="5" fill="none" stroke="#b8860b" stroke-width="1" opacity="0">
+                  <animate attributeName="r" values="5;22;22" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+                  <animate attributeName="opacity" values="0.3;0.05;0" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+                  <animate attributeName="stroke-width" values="1;0.3;0" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+                </circle>
+
+                <!-- Node: New York (primary) -->
+                <circle cx="-95" cy="-28" r="4.5" fill="none" stroke="#b8860b" stroke-width="1.5" opacity="0.75" class="svg-pulse" style="animation-delay:0.5s"/>
+                <circle cx="-95" cy="-28" r="1.8" fill="#b8860b" opacity="0.8"/>
+                <line x1="-95" y1="-35" x2="-95" y2="-21" stroke="#b8860b" stroke-width="0.4" opacity="0.35"/>
+                <line x1="-102" y1="-28" x2="-88" y2="-28" stroke="#b8860b" stroke-width="0.4" opacity="0.35"/>
+                <circle cx="-95" cy="-28" r="4" fill="none" stroke="#b8860b" stroke-width="0.8" opacity="0">
+                  <animate attributeName="r" values="4;18;18" dur="3.5s" repeatCount="indefinite" begin="0.8s"/>
+                  <animate attributeName="opacity" values="0.25;0.04;0" dur="3.5s" repeatCount="indefinite" begin="0.8s"/>
+                </circle>
+
+                <!-- Node: London -->
+                <circle cx="-22" cy="-62" r="4" fill="none" stroke="rgba(0,0,0,0.4)" stroke-width="1.3" class="svg-pulse" style="animation-delay:0.3s"/>
+                <circle cx="-22" cy="-62" r="1.5" fill="rgba(0,0,0,0.45)"/>
+                <line x1="-22" y1="-68" x2="-22" y2="-56" stroke="rgba(0,0,0,0.15)" stroke-width="0.4"/>
+                <line x1="-28" y1="-62" x2="-16" y2="-62" stroke="rgba(0,0,0,0.15)" stroke-width="0.4"/>
+
+                <!-- Node: Dubai -->
+                <circle cx="38" cy="-12" r="3.5" fill="none" stroke="#b8860b" stroke-width="1.2" opacity="0.6" class="svg-pulse" style="animation-delay:0.9s"/>
+                <circle cx="38" cy="-12" r="1.3" fill="#b8860b" opacity="0.65"/>
+
+                <!-- Node: Singapore -->
+                <circle cx="72" cy="18" r="3" fill="none" stroke="rgba(0,0,0,0.3)" stroke-width="1"/>
+                <circle cx="72" cy="18" r="1.2" fill="rgba(0,0,0,0.35)"/>
+
+                <!-- Node: Hong Kong -->
+                <circle cx="98" cy="-22" r="2.5" fill="none" stroke="#b8860b" stroke-width="0.8" opacity="0.5"/>
+                <circle cx="98" cy="-22" r="1" fill="#b8860b" opacity="0.55"/>
+
+                <!-- Node: São Paulo -->
+                <circle cx="-62" cy="48" r="2.5" fill="none" stroke="rgba(0,0,0,0.22)" stroke-width="0.8"/>
+                <circle cx="-62" cy="48" r="1" fill="rgba(0,0,0,0.28)"/>
+
+                <!-- Node: Sydney -->
+                <circle cx="102" cy="58" r="2.5" fill="none" stroke="rgba(0,0,0,0.18)" stroke-width="0.7" class="svg-pulse" style="animation-delay:1.3s"/>
+                <circle cx="102" cy="58" r="1" fill="rgba(0,0,0,0.22)"/>
+
+                <!-- Node: San Francisco -->
+                <circle cx="-118" cy="-18" r="2" fill="none" stroke="rgba(0,0,0,0.15)" stroke-width="0.7"/>
+                <circle cx="-118" cy="-18" r="0.8" fill="rgba(0,0,0,0.2)"/>
+
+                <!-- Node: Mumbai -->
+                <circle cx="48" cy="8" r="2" fill="none" stroke="rgba(0,0,0,0.15)" stroke-width="0.6"/>
+                <circle cx="48" cy="8" r="0.8" fill="rgba(0,0,0,0.2)"/>
+
+                <!-- Data flow arcs + traveling particles -->
+                <path id="arc1" d="M88,-48 Q 15,-95 -95,-28" stroke="#b8860b" stroke-width="1.8" fill="none" opacity="0.45" stroke-dasharray="6 5">
+                  <animate attributeName="stroke-dashoffset" from="0" to="-22" dur="3s" repeatCount="indefinite"/>
+                </path>
+                <circle r="2.5" fill="#b8860b" opacity="0.8" filter="url(#glow)">
+                  <animateMotion dur="4s" repeatCount="indefinite"><mpath href="#arc1"/></animateMotion>
+                </circle>
+                <path id="arc2" d="M88,-48 Q 35,-72 -22,-62" stroke="#b8860b" stroke-width="1.3" fill="none" opacity="0.3" stroke-dasharray="4 5">
+                  <animate attributeName="stroke-dashoffset" from="0" to="-18" dur="2.8s" repeatCount="indefinite"/>
+                </path>
+                <circle r="2" fill="#b8860b" opacity="0.6">
+                  <animateMotion dur="3.5s" repeatCount="indefinite" begin="1s"><mpath href="#arc2"/></animateMotion>
+                </circle>
+                <path id="arc3" d="M-95,-28 Q -58,-58 -22,-62" stroke="rgba(0,0,0,0.2)" stroke-width="1.2" fill="none" stroke-dasharray="3 4">
+                  <animate attributeName="stroke-dashoffset" from="0" to="-14" dur="3.5s" repeatCount="indefinite"/>
+                </path>
+                <circle r="1.8" fill="rgba(0,0,0,0.35)">
+                  <animateMotion dur="3s" repeatCount="indefinite" begin="0.5s"><mpath href="#arc3"/></animateMotion>
+                </circle>
+                <path id="arc4" d="M-22,-62 Q 8,-38 38,-12" stroke="rgba(0,0,0,0.16)" stroke-width="1" fill="none" stroke-dasharray="3 5">
+                  <animate attributeName="stroke-dashoffset" from="0" to="-16" dur="4s" repeatCount="indefinite"/>
+                </path>
+                <circle r="1.5" fill="rgba(0,0,0,0.3)">
+                  <animateMotion dur="3.2s" repeatCount="indefinite" begin="2s"><mpath href="#arc4"/></animateMotion>
+                </circle>
+                <path d="M38,-12 Q 56,5 72,18" stroke="rgba(0,0,0,0.12)" stroke-width="0.8" fill="none" stroke-dasharray="2 4">
+                  <animate attributeName="stroke-dashoffset" from="0" to="-12" dur="3s" repeatCount="indefinite"/>
+                </path>
+                <path d="M72,18 Q 85,-12 88,-48" stroke="#b8860b" stroke-width="0.8" fill="none" opacity="0.25" stroke-dasharray="3 5">
+                  <animate attributeName="stroke-dashoffset" from="0" to="-16" dur="2.8s" repeatCount="indefinite"/>
+                </path>
+                <path d="M-95,-28 Q -82,12 -62,48" stroke="rgba(0,0,0,0.1)" stroke-width="0.8" fill="none" stroke-dasharray="2 5">
+                  <animate attributeName="stroke-dashoffset" from="0" to="-14" dur="5s" repeatCount="indefinite"/>
+                </path>
+                <path d="M88,-48 Q 108,8 102,58" stroke="rgba(0,0,0,0.08)" stroke-width="0.7" fill="none" stroke-dasharray="2 6">
+                  <animate attributeName="stroke-dashoffset" from="0" to="-16" dur="4.5s" repeatCount="indefinite"/>
+                </path>
+
+                <!-- Orbital ring 1 -->
+                <g class="svg-spin" style="animation-duration: 22s;">
+                  <ellipse cx="0" cy="0" rx="175" ry="58" stroke="rgba(0,0,0,0.08)" stroke-width="0.8" fill="none" transform="rotate(-15)"/>
+                  <circle cx="172" cy="-16" r="3" fill="none" stroke="#b8860b" stroke-width="1" opacity="0.7" transform="rotate(-15)"/>
+                  <circle cx="172" cy="-16" r="1" fill="#b8860b" opacity="0.8" transform="rotate(-15)"/>
+                  <circle cx="172" cy="-16" r="3" fill="none" stroke="#b8860b" opacity="0" transform="rotate(-15)">
+                    <animate attributeName="r" values="3;10;10" dur="2s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0.15;0;0" dur="2s" repeatCount="indefinite"/>
+                  </circle>
+                </g>
+
+                <!-- Orbital ring 2 (counter) -->
+                <g class="svg-spin" style="animation-duration: 30s; animation-direction: reverse;">
+                  <ellipse cx="0" cy="0" rx="168" ry="50" stroke="rgba(184,134,11,0.1)" stroke-width="0.6" fill="none" transform="rotate(35)" stroke-dasharray="8 6"/>
+                  <circle cx="-165" cy="18" r="2" fill="none" stroke="rgba(0,0,0,0.3)" stroke-width="0.8" transform="rotate(35)"/>
+                  <circle cx="-165" cy="18" r="0.8" fill="rgba(0,0,0,0.35)" transform="rotate(35)"/>
+                </g>
+
+                <!-- Orbital ring 3 -->
+                <g class="svg-spin" style="animation-duration: 18s;">
+                  <ellipse cx="0" cy="0" rx="162" ry="75" stroke="rgba(0,0,0,0.04)" stroke-width="0.5" fill="none" transform="rotate(-50)" stroke-dasharray="4 10"/>
+                  <circle cx="158" cy="-32" r="1.5" fill="#b8860b" opacity="0.35" transform="rotate(-50)"/>
+                </g>
+
+                <!-- Orbital ring 4 (slow, wide) -->
+                <g class="svg-spin" style="animation-duration: 40s;">
+                  <ellipse cx="0" cy="0" rx="170" ry="108" stroke="rgba(0,0,0,0.025)" stroke-width="0.4" fill="none" transform="rotate(12)" stroke-dasharray="3 14"/>
+                  <circle cx="168" cy="14" r="1" fill="rgba(0,0,0,0.2)" transform="rotate(12)"/>
                 </g>
               </g>
             </svg>
@@ -177,45 +343,48 @@
           <div class="division-art-container">
             <svg class="division-svg" viewBox="0 0 400 360" fill="none" xmlns="http://www.w3.org/2000/svg">
               <!-- Subtle grid -->
-              <g stroke="rgba(255,255,255,0.04)" stroke-width="1">
+              <g stroke="rgba(239,175,66,0.04)" stroke-width="0.5">
                 <line x1="0" y1="180" x2="400" y2="180"/><line x1="200" y1="0" x2="200" y2="360"/>
+                <line x1="100" y1="0" x2="100" y2="360"/><line x1="300" y1="0" x2="300" y2="360"/>
+                <line x1="0" y1="90" x2="400" y2="90"/><line x1="0" y1="270" x2="400" y2="270"/>
               </g>
 
               <!-- Coin Stack -->
-              <g transform="translate(200, 180)">
+              <g transform="translate(200, 175)">
                 <!-- Bottom coin -->
-                <ellipse cx="0" cy="60" rx="80" ry="20" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" fill="rgba(255,255,255,0.02)"/>
-                <path d="M-80,60 L-80,45 A80 20 0 0 0 80 45 L80,60" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" fill="rgba(255,255,255,0.02)"/>
-                <ellipse cx="0" cy="45" rx="80" ry="20" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" fill="rgba(255,255,255,0.03)"/>
+                <ellipse cx="0" cy="65" rx="85" ry="22" stroke="rgba(255,255,255,0.1)" stroke-width="1" fill="rgba(255,255,255,0.015)"/>
+                <path d="M-85,65 L-85,48 A85 22 0 0 0 85 48 L85,65" stroke="rgba(255,255,255,0.1)" stroke-width="1" fill="rgba(255,255,255,0.015)"/>
+                <ellipse cx="0" cy="48" rx="85" ry="22" stroke="rgba(255,255,255,0.15)" stroke-width="1" fill="rgba(255,255,255,0.02)"/>
 
                 <!-- Middle coin -->
-                <path d="M-80,25 L-80,10 A80 20 0 0 0 80 10 L80,25" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" fill="rgba(255,255,255,0.03)"/>
-                <ellipse cx="0" cy="10" rx="80" ry="20" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" fill="rgba(255,255,255,0.04)"/>
+                <path d="M-85,25 L-85,8 A85 22 0 0 0 85 8 L85,25" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" fill="rgba(255,255,255,0.025)"/>
+                <ellipse cx="0" cy="8" rx="85" ry="22" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" fill="rgba(255,255,255,0.03)"/>
 
                 <!-- Top coin (highlighted) -->
-                <path d="M-80,-10 L-80,-25 A80 20 0 0 0 80 -25 L80,-10" stroke="var(--gold)" stroke-width="1.5" fill="rgba(239,175,66,0.06)"/>
-                <ellipse cx="0" cy="-25" rx="80" ry="20" stroke="var(--gold)" stroke-width="2" fill="rgba(239,175,66,0.08)"/>
-                <!-- Token symbol on top coin -->
-                <ellipse cx="0" cy="-25" rx="45" ry="11" stroke="rgba(255,255,255,0.3)" stroke-width="1" fill="none"/>
-                <text x="0" y="-21" text-anchor="middle" font-size="14" font-weight="600" fill="var(--gold)" font-family="Inter, sans-serif">TOKEN</text>
-              </g>
-
-              <!-- Upward arrow (growth) -->
-              <g transform="translate(310, 100)" class="svg-float">
-                <line x1="0" y1="40" x2="0" y2="0" stroke="var(--gold)" stroke-width="1.5"/>
-                <polyline points="-8,10 0,0 8,10" stroke="var(--gold)" stroke-width="1.5" fill="none"/>
+                <path d="M-85,-15 L-85,-32 A85 22 0 0 0 85 -32 L85,-15" stroke="var(--gold)" stroke-width="1.5" fill="rgba(239,175,66,0.05)"/>
+                <ellipse cx="0" cy="-32" rx="85" ry="22" stroke="var(--gold)" stroke-width="2" fill="rgba(239,175,66,0.07)"/>
+                <!-- Inner ring on top coin -->
+                <ellipse cx="0" cy="-32" rx="45" ry="11" stroke="rgba(239,175,66,0.4)" stroke-width="1" fill="none"/>
+                <circle cx="0" cy="-32" r="4" fill="var(--gold)" class="svg-pulse"/>
               </g>
 
               <!-- Small chart bars -->
-              <g transform="translate(60, 240)" opacity="0.3">
-                <rect x="0" y="30" width="12" height="30" fill="rgba(255,255,255,0.3)" rx="1"/>
-                <rect x="18" y="15" width="12" height="45" fill="rgba(255,255,255,0.4)" rx="1"/>
-                <rect x="36" y="5" width="12" height="55" fill="var(--gold)" rx="1" opacity="0.6"/>
+              <g transform="translate(55, 240)" opacity="0.35">
+                <rect x="0" y="30" width="10" height="30" fill="rgba(255,255,255,0.2)" rx="1"/>
+                <rect x="16" y="18" width="10" height="42" fill="rgba(255,255,255,0.3)" rx="1"/>
+                <rect x="32" y="5" width="10" height="55" fill="var(--gold)" rx="1" opacity="0.5"/>
+                <rect x="48" y="12" width="10" height="48" fill="rgba(255,255,255,0.25)" rx="1"/>
               </g>
 
-              <!-- Connection dots -->
-              <circle cx="310" cy="145" r="3" fill="var(--gold)" class="svg-pulse"/>
-              <circle cx="80" cy="270" r="2" fill="rgba(255,255,255,0.4)"/>
+              <!-- Accent dots -->
+              <circle cx="310" cy="145" r="3" fill="var(--gold)" opacity="0.6" class="svg-pulse"/>
+              <circle cx="80" cy="275" r="2" fill="rgba(255,255,255,0.3)" class="svg-pulse" style="animation-delay:0.7s"/>
+
+              <!-- Orbiting ring -->
+              <g class="svg-spin" style="animation-duration: 20s;" transform="translate(200, 175)">
+                <ellipse cx="0" cy="0" rx="130" ry="45" stroke="rgba(239,175,66,0.08)" stroke-width="0.8" fill="none" transform="rotate(-12)"/>
+                <circle cx="128" cy="-10" r="2.5" fill="var(--gold)" opacity="0.5" transform="rotate(-12)"/>
+              </g>
             </svg>
           </div>
           <div class="division-content">
@@ -235,66 +404,65 @@
           <div class="division-art-container">
             <svg class="division-svg" viewBox="0 0 400 360" fill="none" xmlns="http://www.w3.org/2000/svg">
               <!-- Subtle grid -->
-              <g stroke="rgba(255,255,255,0.04)" stroke-width="1">
+              <g stroke="rgba(239,175,66,0.04)" stroke-width="0.5">
                 <line x1="0" y1="280" x2="400" y2="280"/>
                 <line x1="60" y1="40" x2="60" y2="320"/>
+                <line x1="0" y1="180" x2="400" y2="180"/>
+                <line x1="0" y1="80" x2="400" y2="80"/>
+                <line x1="200" y1="40" x2="200" y2="320"/>
+                <line x1="340" y1="40" x2="340" y2="320"/>
               </g>
 
-              <!-- Y-axis labels -->
-              <g fill="rgba(255,255,255,0.15)" font-size="8" font-family="Inter, sans-serif">
-                <text x="45" y="105" text-anchor="end">H</text>
-                <text x="45" y="180" text-anchor="end">M</text>
-                <text x="45" y="260" text-anchor="end">L</text>
+              <!-- Y-axis tick marks -->
+              <g stroke="rgba(255,255,255,0.1)" stroke-width="0.5">
+                <line x1="55" y1="105" x2="65" y2="105"/>
+                <line x1="55" y1="180" x2="65" y2="180"/>
+                <line x1="55" y1="255" x2="65" y2="255"/>
               </g>
 
               <!-- Candlestick Chart -->
               <g transform="translate(80, 80)">
                 <!-- Candle 1 - bearish (down) -->
-                <line x1="20" y1="20" x2="20" y2="180" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
-                <rect x="10" y="60" width="20" height="80" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" fill="rgba(255,255,255,0.08)"/>
+                <line x1="20" y1="20" x2="20" y2="180" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+                <rect x="10" y="60" width="20" height="80" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" fill="rgba(255,255,255,0.05)"/>
 
                 <!-- Candle 2 - bullish (up) -->
-                <line x1="65" y1="40" x2="65" y2="170" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
-                <rect x="55" y="50" width="20" height="70" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" fill="rgba(255,255,255,0.12)"/>
+                <line x1="65" y1="40" x2="65" y2="170" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+                <rect x="55" y="50" width="20" height="70" stroke="rgba(255,255,255,0.35)" stroke-width="1.5" fill="rgba(255,255,255,0.08)"/>
 
                 <!-- Candle 3 - strong bullish (gold) -->
-                <line x1="110" y1="10" x2="110" y2="150" stroke="var(--gold)" stroke-width="1" opacity="0.6"/>
-                <rect x="100" y="30" width="20" height="80" stroke="var(--gold)" stroke-width="2" fill="rgba(239,175,66,0.1)"/>
+                <line x1="110" y1="10" x2="110" y2="150" stroke="var(--gold)" stroke-width="1" opacity="0.5"/>
+                <rect x="100" y="30" width="20" height="80" stroke="var(--gold)" stroke-width="1.5" fill="rgba(239,175,66,0.08)"/>
 
                 <!-- Candle 4 - bullish -->
-                <line x1="155" y1="25" x2="155" y2="140" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
-                <rect x="145" y="40" width="20" height="60" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" fill="rgba(255,255,255,0.08)"/>
+                <line x1="155" y1="25" x2="155" y2="140" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+                <rect x="145" y="40" width="20" height="60" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" fill="rgba(255,255,255,0.05)"/>
 
                 <!-- Candle 5 - top -->
-                <line x1="200" y1="5" x2="200" y2="120" stroke="var(--gold)" stroke-width="1" opacity="0.5"/>
-                <rect x="190" y="15" width="20" height="55" stroke="var(--gold)" stroke-width="1.5" fill="rgba(239,175,66,0.08)"/>
+                <line x1="200" y1="5" x2="200" y2="120" stroke="var(--gold)" stroke-width="1" opacity="0.4"/>
+                <rect x="190" y="15" width="20" height="55" stroke="var(--gold)" stroke-width="1.5" fill="rgba(239,175,66,0.06)"/>
 
                 <!-- Trend line overlay -->
-                <path d="M20,100 Q65,75 110,50 T200,30" stroke="var(--gold)" stroke-width="1.5" fill="none" opacity="0.5" stroke-dasharray="4 3"/>
-              </g>
-
-              <!-- Liquidity flow arrows -->
-              <g transform="translate(300, 160)">
-                <!-- Bidirectional arrows -->
-                <path d="M0,0 L50,0" stroke="var(--gold)" stroke-width="1.5" opacity="0.5"/>
-                <polyline points="42,-5 50,0 42,5" stroke="var(--gold)" stroke-width="1.5" fill="none" opacity="0.5"/>
-                <path d="M0,25 L50,25" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
-                <polyline points="8,20 0,25 8,30" stroke="rgba(255,255,255,0.3)" stroke-width="1" fill="none"/>
-              </g>
-
-              <!-- Exchange node -->
-              <g transform="translate(355, 160)" class="svg-pulse">
-                <rect x="-12" y="-12" width="24" height="24" rx="4" stroke="var(--gold)" stroke-width="1.5" fill="rgba(239,175,66,0.08)"/>
-                <text x="0" y="4" text-anchor="middle" font-size="10" fill="var(--gold)" font-family="Inter, sans-serif">⇄</text>
+                <path d="M20,100 Q65,75 110,50 T200,30" stroke="var(--gold)" stroke-width="1.5" fill="none" opacity="0.4" stroke-dasharray="4 3"/>
               </g>
 
               <!-- Volume bars at bottom -->
-              <g transform="translate(80, 285)" opacity="0.25">
-                <rect x="10" y="-15" width="20" height="15" fill="rgba(255,255,255,0.4)" rx="1"/>
-                <rect x="55" y="-22" width="20" height="22" fill="rgba(255,255,255,0.5)" rx="1"/>
-                <rect x="100" y="-35" width="20" height="35" fill="var(--gold)" rx="1" opacity="0.6"/>
-                <rect x="145" y="-28" width="20" height="28" fill="rgba(255,255,255,0.4)" rx="1"/>
-                <rect x="190" y="-30" width="20" height="30" fill="var(--gold)" rx="1" opacity="0.5"/>
+              <g transform="translate(80, 285)" opacity="0.3">
+                <rect x="10" y="-15" width="18" height="15" fill="rgba(255,255,255,0.25)" rx="1"/>
+                <rect x="55" y="-22" width="18" height="22" fill="rgba(255,255,255,0.3)" rx="1"/>
+                <rect x="100" y="-35" width="18" height="35" fill="var(--gold)" rx="1" opacity="0.5"/>
+                <rect x="145" y="-28" width="18" height="28" fill="rgba(255,255,255,0.25)" rx="1"/>
+                <rect x="190" y="-30" width="18" height="30" fill="var(--gold)" rx="1" opacity="0.4"/>
+              </g>
+
+              <!-- Accent dots -->
+              <circle cx="330" cy="100" r="2.5" fill="var(--gold)" opacity="0.5" class="svg-pulse" style="animation-delay:0.3s"/>
+              <circle cx="75" cy="310" r="2" fill="rgba(255,255,255,0.3)" class="svg-pulse" style="animation-delay:0.7s"/>
+
+              <!-- Orbiting ring -->
+              <g class="svg-spin" style="animation-duration: 20s;" transform="translate(200, 175)">
+                <ellipse cx="0" cy="0" rx="140" ry="50" stroke="rgba(239,175,66,0.08)" stroke-width="0.8" fill="none" transform="rotate(-8)"/>
+                <circle cx="138" cy="-8" r="2.5" fill="var(--gold)" opacity="0.5" transform="rotate(-8)"/>
               </g>
             </svg>
           </div>
@@ -315,65 +483,74 @@
           <div class="division-art-container">
             <svg class="division-svg" viewBox="0 0 400 360" fill="none" xmlns="http://www.w3.org/2000/svg">
               <!-- Subtle grid -->
-              <g stroke="rgba(255,255,255,0.04)" stroke-width="1">
+              <g stroke="rgba(239,175,66,0.04)" stroke-width="0.5">
                 <line x1="0" y1="180" x2="400" y2="180"/><line x1="200" y1="0" x2="200" y2="360"/>
+                <line x1="100" y1="0" x2="100" y2="360"/><line x1="300" y1="0" x2="300" y2="360"/>
+                <line x1="0" y1="90" x2="400" y2="90"/><line x1="0" y1="270" x2="400" y2="270"/>
               </g>
 
               <!-- Brain outline (left hemisphere) -->
               <g transform="translate(200, 175)">
                 <path d="M0,-95 C-30,-100 -70,-90 -85,-60 C-100,-30 -95,0 -90,25 C-85,55 -75,75 -55,90 C-35,105 -15,108 0,105"
-                      stroke="rgba(255,255,255,0.35)" stroke-width="2" fill="none"/>
+                      stroke="rgba(255,255,255,0.25)" stroke-width="1.5" fill="none"/>
                 <!-- Brain outline (right hemisphere) -->
                 <path d="M0,-95 C30,-100 70,-90 85,-60 C100,-30 95,0 90,25 C85,55 75,75 55,90 C35,105 15,108 0,105"
-                      stroke="rgba(255,255,255,0.35)" stroke-width="2" fill="none"/>
+                      stroke="rgba(255,255,255,0.25)" stroke-width="1.5" fill="none"/>
                 <!-- Center line -->
-                <line x1="0" y1="-95" x2="0" y2="105" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                <line x1="0" y1="-95" x2="0" y2="105" stroke="rgba(255,255,255,0.08)" stroke-width="0.5"/>
 
                 <!-- Neural network nodes (left side) -->
-                <circle cx="-55" cy="-50" r="6" fill="rgba(239,175,66,0.15)" stroke="var(--gold)" stroke-width="1.5" class="svg-pulse"/>
-                <circle cx="-70" cy="10" r="5" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
-                <circle cx="-45" cy="55" r="5" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
-                <circle cx="-30" cy="-20" r="4" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
-                <circle cx="-50" cy="-80" r="3" fill="rgba(255,255,255,0.2)"/>
+                <circle cx="-55" cy="-50" r="5" fill="rgba(239,175,66,0.1)" stroke="var(--gold)" stroke-width="1.5" class="svg-pulse"/>
+                <circle cx="-70" cy="10" r="4" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+                <circle cx="-45" cy="55" r="4" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+                <circle cx="-30" cy="-20" r="3.5" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+                <circle cx="-50" cy="-80" r="2.5" fill="rgba(255,255,255,0.15)" class="svg-pulse" style="animation-delay:1s"/>
 
                 <!-- Neural network nodes (right side) -->
-                <circle cx="55" cy="-45" r="6" fill="rgba(239,175,66,0.15)" stroke="var(--gold)" stroke-width="1.5" class="svg-pulse" style="animation-delay:0.5s"/>
-                <circle cx="65" cy="15" r="5" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
-                <circle cx="40" cy="60" r="5" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
-                <circle cx="35" cy="-15" r="4" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+                <circle cx="55" cy="-45" r="5" fill="rgba(239,175,66,0.1)" stroke="var(--gold)" stroke-width="1.5" class="svg-pulse" style="animation-delay:0.5s"/>
+                <circle cx="65" cy="15" r="4" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+                <circle cx="40" cy="60" r="4" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+                <circle cx="35" cy="-15" r="3.5" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
 
                 <!-- Synaptic connections (left) -->
-                <path d="M-55,-50 Q -40,-30 -30,-20" stroke="var(--gold)" stroke-width="1" opacity="0.5"/>
-                <path d="M-30,-20 Q -50,0 -70,10" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-                <path d="M-70,10 Q -55,35 -45,55" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
-                <path d="M-55,-50 Q -55,-70 -50,-80" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+                <path d="M-55,-50 Q -40,-30 -30,-20" stroke="var(--gold)" stroke-width="1" opacity="0.4"/>
+                <path d="M-30,-20 Q -50,0 -70,10" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+                <path d="M-70,10 Q -55,35 -45,55" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                <path d="M-55,-50 Q -55,-70 -50,-80" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
 
                 <!-- Synaptic connections (right) -->
-                <path d="M55,-45 Q 45,-25 35,-15" stroke="var(--gold)" stroke-width="1" opacity="0.5"/>
-                <path d="M35,-15 Q 50,5 65,15" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
-                <path d="M65,15 Q 50,40 40,60" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+                <path d="M55,-45 Q 45,-25 35,-15" stroke="var(--gold)" stroke-width="1" opacity="0.4"/>
+                <path d="M35,-15 Q 50,5 65,15" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+                <path d="M65,15 Q 50,40 40,60" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
 
                 <!-- Cross connections -->
-                <path d="M-30,-20 Q 0,-30 35,-15" stroke="var(--gold)" stroke-width="1" opacity="0.3" stroke-dasharray="3 3"/>
-                <path d="M-70,10 Q 0,5 65,15" stroke="rgba(255,255,255,0.15)" stroke-width="1" stroke-dasharray="2 3"/>
+                <path d="M-30,-20 Q 0,-30 35,-15" stroke="var(--gold)" stroke-width="1" opacity="0.25" stroke-dasharray="3 3"/>
+                <path d="M-70,10 Q 0,5 65,15" stroke="rgba(255,255,255,0.1)" stroke-width="1" stroke-dasharray="2 3"/>
 
                 <!-- Central AI core -->
-                <circle cx="0" cy="0" r="14" fill="rgba(239,175,66,0.1)" stroke="var(--gold)" stroke-width="2" class="svg-pulse" style="animation-delay:0.2s"/>
-                <circle cx="0" cy="0" r="5" fill="var(--gold)"/>
+                <circle cx="0" cy="0" r="14" fill="rgba(239,175,66,0.08)" stroke="var(--gold)" stroke-width="1.5" class="svg-pulse" style="animation-delay:0.2s"/>
+                <circle cx="0" cy="0" r="5" fill="var(--gold)" opacity="0.8"/>
               </g>
 
               <!-- Circuit traces extending from brain -->
-              <g stroke="rgba(255,255,255,0.12)" stroke-width="1">
+              <g stroke="rgba(255,255,255,0.08)" stroke-width="0.8">
                 <path d="M90 180 L60 180 L60 200 L40 200" fill="none"/>
                 <path d="M310 180 L340 180 L340 160 L360 160" fill="none"/>
                 <path d="M200 285 L200 310 L220 310" fill="none"/>
               </g>
-              <rect x="35" y="196" width="8" height="8" rx="1" fill="rgba(255,255,255,0.15)"/>
-              <rect x="356" y="156" width="8" height="8" rx="1" fill="rgba(239,175,66,0.3)"/>
-              <rect x="218" y="306" width="8" height="8" rx="1" fill="rgba(255,255,255,0.15)"/>
+              <rect x="35" y="196" width="7" height="7" rx="1" fill="rgba(255,255,255,0.1)"/>
+              <rect x="356" y="156" width="7" height="7" rx="1" fill="rgba(239,175,66,0.25)"/>
+              <rect x="218" y="306" width="7" height="7" rx="1" fill="rgba(255,255,255,0.1)"/>
 
-              <!-- "AI" label -->
-              <text x="200" y="328" text-anchor="middle" font-size="9" font-weight="500" fill="rgba(255,255,255,0.2)" font-family="Inter, sans-serif" letter-spacing="0.15em">NEURAL NETWORK</text>
+              <!-- Accent dots -->
+              <circle cx="330" cy="95" r="2.5" fill="var(--gold)" opacity="0.5" class="svg-pulse" style="animation-delay:0.3s"/>
+              <circle cx="70" cy="310" r="2" fill="rgba(255,255,255,0.3)" class="svg-pulse" style="animation-delay:0.7s"/>
+
+              <!-- Orbiting ring -->
+              <g class="svg-spin" style="animation-duration: 20s;" transform="translate(200, 175)">
+                <ellipse cx="0" cy="0" rx="135" ry="48" stroke="rgba(239,175,66,0.08)" stroke-width="0.8" fill="none" transform="rotate(-15)"/>
+                <circle cx="132" cy="-12" r="2.5" fill="var(--gold)" opacity="0.5" transform="rotate(-15)"/>
+              </g>
             </svg>
           </div>
           <div class="division-content">
@@ -398,89 +575,88 @@
     <div class="section-container">
       <div class="section-header" data-reveal>
         <span class="section-label">02</span>
-        <h2 class="section-title">Network & Presence</h2>
+        <h2 class="section-title">Ecosystem</h2>
         <div class="section-line"></div>
       </div>
 
-      <div class="ticker-dashboard" data-reveal>
-        <!-- Row 1: Projects -->
-        <div class="ticker-row">
-          <div class="ticker-label">PROJECTS</div>
-          <div class="ticker-track">
-            <div class="ticker-content ticker-scroll-left">
-              <span class="ticker-item">WorldLand Layer-1 Blockchain</span>
-              <span class="ticker-dot">·</span>
-              <span class="ticker-item">Project Alpha (TBA)</span>
-              <span class="ticker-dot">·</span>
-              <span class="ticker-item">Strategic Partner Network</span>
-              <span class="ticker-dot">·</span>
-              <span class="ticker-item">Institutional Liquidity Hub</span>
-              <span class="ticker-dot">·</span>
-              <!-- Duplicate for seamless loop -->
-              <span class="ticker-item">WorldLand Layer-1 Blockchain</span>
-              <span class="ticker-dot">·</span>
-              <span class="ticker-item">Project Alpha (TBA)</span>
-              <span class="ticker-dot">·</span>
-              <span class="ticker-item">Strategic Partner Network</span>
-              <span class="ticker-dot">·</span>
-              <span class="ticker-item">Institutional Liquidity Hub</span>
-              <span class="ticker-dot">·</span>
+      <!-- PROJECTS Carousel -->
+      <div class="showcase-block" data-reveal>
+        <div class="showcase-label">Projects</div>
+        <div class="showcase-carousel" id="projectsCarousel">
+          <div class="showcase-viewport">
+            <div class="showcase-track">
+              <!-- Slide 1: WorldLand -->
+              <div class="showcase-slide active">
+                <div class="showcase-logo">
+                  <img src="assets/worldland-logo.png" alt="WorldLand" />
+                </div>
+                <div class="showcase-detail">
+                  <h3 class="showcase-name">WorldLand</h3>
+                  <p class="showcase-type">Layer-1 Blockchain</p>
+                  <p class="showcase-desc">A next-generation Layer-1 blockchain protocol engineered for AI-native financial infrastructure, enabling programmable capital models and on-chain economic systems built for the emerging AI-driven economy.</p>
+                </div>
+              </div>
+              <!-- Slide 2: Project Alpha -->
+              <div class="showcase-slide">
+                <div class="showcase-logo showcase-logo-placeholder">
+                  <span>TBA</span>
+                </div>
+                <div class="showcase-detail">
+                  <h3 class="showcase-name">Project Alpha</h3>
+                  <p class="showcase-type">Coming Soon</p>
+                  <p class="showcase-desc">A strategic initiative currently in development. Further details will be announced as we approach the official launch. Stay connected for updates on this institutional-grade digital asset venture.</p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-
-        <!-- Row 2: Partners -->
-        <div class="ticker-row">
-          <div class="ticker-label">PARTNERS</div>
-          <div class="ticker-track">
-            <div class="ticker-content ticker-scroll-right">
-              <span class="ticker-item">Strategic Partner Network</span>
-              <span class="ticker-dot">·</span>
-              <span class="ticker-item">Institutional Capital Partners</span>
-              <span class="ticker-dot">·</span>
-              <span class="ticker-item">Coming Soon</span>
-              <span class="ticker-dot">·</span>
-              <span class="ticker-item">Global Exchange Alliance</span>
-              <span class="ticker-dot">·</span>
-              <!-- Duplicate for seamless loop -->
-              <span class="ticker-item">Strategic Partner Network</span>
-              <span class="ticker-dot">·</span>
-              <span class="ticker-item">Institutional Capital Partners</span>
-              <span class="ticker-dot">·</span>
-              <span class="ticker-item">Coming Soon</span>
-              <span class="ticker-dot">·</span>
-              <span class="ticker-item">Global Exchange Alliance</span>
-              <span class="ticker-dot">·</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Row 3: Global Presence -->
-        <div class="ticker-row">
-          <div class="ticker-label">PRESENCE</div>
-          <div class="ticker-track">
-            <div class="ticker-content ticker-scroll-left" style="animation-duration: 28s;">
-              <span class="ticker-item ticker-highlight">Seoul HQ (Republic of Korea)</span>
-              <span class="ticker-dot">·</span>
-              <span class="ticker-item">Hong Kong (Cyberport)</span>
-              <span class="ticker-dot">·</span>
-              <span class="ticker-item">San Jose (California)</span>
-              <span class="ticker-dot">·</span>
-              <span class="ticker-item">Dubai (JLT, UAE)</span>
-              <span class="ticker-dot">·</span>
-              <!-- Duplicate for seamless loop -->
-              <span class="ticker-item ticker-highlight">Seoul HQ (Republic of Korea)</span>
-              <span class="ticker-dot">·</span>
-              <span class="ticker-item">Hong Kong (Cyberport)</span>
-              <span class="ticker-dot">·</span>
-              <span class="ticker-item">San Jose (California)</span>
-              <span class="ticker-dot">·</span>
-              <span class="ticker-item">Dubai (JLT, UAE)</span>
-              <span class="ticker-dot">·</span>
-            </div>
-          </div>
+          <button class="showcase-arrow showcase-arrow-prev" aria-label="Previous" onclick="slideCarousel('projectsCarousel', -1)">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="showcase-arrow showcase-arrow-next" aria-label="Next" onclick="slideCarousel('projectsCarousel', 1)">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
         </div>
       </div>
+
+      <!-- PARTNERS Carousel -->
+      <div class="showcase-block" data-reveal>
+        <div class="showcase-label">Partners</div>
+        <div class="showcase-carousel" id="partnersCarousel">
+          <div class="showcase-viewport">
+            <div class="showcase-track">
+              <!-- Slide 1: MMXXIV -->
+              <div class="showcase-slide active">
+                <div class="showcase-logo">
+                  <img src="assets/partner-mmxxiv-logo.png" alt="MMXXIV" />
+                </div>
+                <div class="showcase-detail">
+                  <h3 class="showcase-name">MMXXIV</h3>
+                  <p class="showcase-type">Strategic Capital Partner</p>
+                  <p class="showcase-desc">A global strategic capital partner providing institutional-grade investment support and market access. MMXXIV collaborates with Helios Labs to bridge traditional capital markets with next-generation Web3 financial systems.</p>
+                </div>
+              </div>
+              <!-- Slide 2: Coming Soon -->
+              <div class="showcase-slide">
+                <div class="showcase-logo showcase-logo-placeholder">
+                  <span>+</span>
+                </div>
+                <div class="showcase-detail">
+                  <h3 class="showcase-name">More Partners</h3>
+                  <p class="showcase-type">Expanding Network</p>
+                  <p class="showcase-desc">We are actively growing our global partner network across exchanges, institutional capital firms, and technology providers. New strategic partnerships will be announced as they are formalized.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="showcase-arrow showcase-arrow-prev" aria-label="Previous" onclick="slideCarousel('partnersCarousel', -1)">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="showcase-arrow showcase-arrow-next" aria-label="Next" onclick="slideCarousel('partnersCarousel', 1)">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -489,44 +665,81 @@
        ═══════════════════════════════════════════ -->
   <section id="contact">
     <div class="section-container">
-
-      <!-- Institutional Solid Contact Form Card Near Footer -->
-      <div class="contact-glass-card" data-reveal style="margin-top: var(--space-2xl);">
-        <h2 class="contact-title">GET IN TOUCH</h2>
-        <p class="contact-subtitle">
-          Reach out to us today and discover how Helios Labs can
-          drive your business forward.
-        </p>
-
-        <form class="contact-form" onsubmit="return false;">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="fullName">Full Name</label>
-              <input type="text" id="fullName" placeholder="Your name" />
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" placeholder="your@email.com" />
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" placeholder="+1 (000) 000-0000" />
-            </div>
-            <div class="form-group">
-              <label for="subject">Subject</label>
-              <input type="text" id="subject" placeholder="How can we help?" />
-            </div>
-          </div>
-          <div class="form-group form-group-full">
-            <label for="message">Message</label>
-            <textarea id="message" rows="5" placeholder="Tell us about your project..."></textarea>
-          </div>
-          <button type="submit" class="contact-submit-btn">SUBMIT YOUR REQUEST</button>
-        </form>
+      <div class="section-header" data-reveal>
+        <span class="section-label">03</span>
+        <h2 class="section-title">Contact</h2>
+        <div class="section-line"></div>
       </div>
 
+      <div class="contact-layout" data-reveal>
+        <!-- Left: Info -->
+        <div class="contact-info">
+          <div class="contact-email-block">
+            <p class="contact-overline">Get in Touch</p>
+            <a href="mailto:harry@helioslabs.com" class="contact-email-main">harry@helioslabs.com</a>
+          </div>
+
+          <div class="contact-offices">
+            <div class="contact-office">
+              <h4 class="office-city">Seoul <span class="office-badge">HQ</span></h4>
+              <p>31, Gangnam-daero 92-gil,<br>Gangnam-gu, Seoul,<br>Republic of Korea</p>
+            </div>
+            <div class="contact-office">
+              <h4 class="office-city">Hong Kong</h4>
+              <p>100 Cyberport Road,<br>Pok Fu Lam,<br>Hong Kong</p>
+            </div>
+            <div class="contact-office">
+              <h4 class="office-city">San Jose</h4>
+              <p>99 South Almaden Boulevard,<br>San Jose, CA 95113,<br>United States</p>
+            </div>
+            <div class="contact-office">
+              <h4 class="office-city">Dubai</h4>
+              <p>Almas Tower,<br>Jumeirah Lakes Towers (JLT),<br>Dubai, UAE</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Contact Form -->
+        <div class="contact-form-wrapper">
+          <div class="contact-form-card">
+            <div class="form-card-header">
+              <p class="form-card-overline">Send a Message</p>
+              <h3 class="form-card-title">Let's start a conversation</h3>
+              <div class="form-card-line"></div>
+            </div>
+            <form class="contact-form" id="contactForm" onsubmit="event.preventDefault();">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="fullName" class="form-label">Full Name</label>
+                  <input type="text" id="fullName" name="fullName" class="form-input" placeholder="Your name" autocomplete="name" />
+                </div>
+                <div class="form-group">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" id="email" name="email" class="form-input" placeholder="you@company.com" autocomplete="email" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" class="form-input" placeholder="+1 (000) 000-0000" autocomplete="tel" />
+                </div>
+                <div class="form-group">
+                  <label for="subject" class="form-label">Subject</label>
+                  <input type="text" id="subject" name="subject" class="form-input" placeholder="How can we help?" />
+                </div>
+              </div>
+              <div class="form-group form-group-full">
+                <label for="message" class="form-label">Message</label>
+                <textarea id="message" name="message" class="form-input form-textarea" placeholder="Tell us about your project..." rows="5"></textarea>
+              </div>
+              <button type="submit" class="form-submit" id="submitBtn">
+                <span>Submit Your Request</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 

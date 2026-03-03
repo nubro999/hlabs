@@ -14,13 +14,13 @@
     SIM_RESOLUTION: 128,
     DYE_RESOLUTION: 1440,
     CAPTURE_RESOLUTION: 512,
-    DENSITY_DISSIPATION: 3.5,
-    VELOCITY_DISSIPATION: 2,
+    DENSITY_DISSIPATION: 5,
+    VELOCITY_DISSIPATION: 3,
     PRESSURE: 0.1,
     PRESSURE_ITERATIONS: 20,
     CURL: 3,
-    SPLAT_RADIUS: 0.2,
-    SPLAT_FORCE: 6000,
+    SPLAT_RADIUS: 0.1,
+    SPLAT_FORCE: 3000,
     SHADING: true,
     COLOR_UPDATE_SPEED: 10,
     PAUSED: false,
@@ -755,9 +755,9 @@
     // Gold/amber/orange hues only (H: 0.04–0.12 ≈ 15°–43°)
     let h = 0.04 + Math.random() * 0.08;
     let c = HSVtoRGB(h, 0.8 + Math.random() * 0.2, 1.0);
-    c.r *= 0.15;
-    c.g *= 0.15;
-    c.b *= 0.15;
+    c.r *= 0.08;
+    c.g *= 0.08;
+    c.b *= 0.08;
     return c;
   }
 
