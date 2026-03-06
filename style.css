@@ -336,7 +336,10 @@ img {
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.6;
   margin-bottom: var(--space-md);
-  max-width: 420px;
+  max-width: none;
+  white-space: nowrap;
+  position: relative;
+  z-index: 6;
 }
 
 /* Buttons */
@@ -391,8 +394,8 @@ img {
   z-index: 3;
   animation: sunFloat 10s ease-in-out infinite, sunSpin 120s linear infinite;
   filter: brightness(1.3) drop-shadow(0 0 80px rgba(239, 175, 66, 0.5));
-  mask-image: radial-gradient(circle at center, white 30%, transparent 60%);
-  -webkit-mask-image: radial-gradient(circle at center, white 30%, transparent 60%);
+  mask-image: radial-gradient(circle at center, white 45%, transparent 68%);
+  -webkit-mask-image: radial-gradient(circle at center, white 45%, transparent 68%);
 }
 
 .sun-glow {
@@ -1396,11 +1399,54 @@ section {
   }
 }
 
-/* HQ Section */
-.contact-offices-hq {
+/* Seoul + Telegram Row */
+.contact-seoul-row {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-xl);
   margin-bottom: var(--space-xl);
   padding-bottom: var(--space-lg);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.contact-telegram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.telegram-qr-img {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  border-radius: 12px;
+  opacity: 0.6;
+  filter: brightness(0.85);
+  transition: transform 0.3s var(--ease-out), box-shadow 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
+}
+
+.telegram-qr-img:hover {
+  transform: scale(1.05);
+  opacity: 1;
+  filter: brightness(1);
+  box-shadow: 0 0 24px rgba(239, 175, 66, 0.2);
+}
+
+.telegram-label {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 0.03em;
+  text-align: center;
+  max-width: 130px;
+}
+
+@media (max-width: 768px) {
+  .contact-seoul-row {
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
 }
 
 .contact-overline {
