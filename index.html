@@ -18,7 +18,6 @@
         <img src="assets/helios-logo.png" alt="Helios Labs" class="logo-img" />
         <div class="logo-text-group">
           <span class="logo-text">Helios Labs</span>
-          <span class="logo-sub">LABS</span>
         </div>
       </a>
       <ul class="nav-links" id="navLinks">
@@ -47,11 +46,10 @@
           <span class="hero-title-accent">FUTURE OF FINANCE</span>
         </h1>
         <p class="hero-subtitle" data-reveal>
-          Global Institutional-Grade Web3 Financial Strategy Group<br />
-          for the AI-Driven Economy
+          Global Institutional-Grade Web3 Financial Strategy Group for the AI-Driven Economy
         </p>
-        <a href="#divisions" class="btn-primary" data-reveal>
-          <span>Discover Our Vision</span>
+        <a href="#contact" class="btn-primary" data-reveal>
+          <span>Contact Us</span>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
@@ -470,10 +468,10 @@
             <div class="division-index">02</div>
             <h3>Global Liquidity &<br />Exchange Strategy</h3>
             <ul class="division-list">
-              <li>Exchange positioning & listing architecture</li>
+              <li>Exchange integration & market structure advisory</li>
               <li>Market structure & liquidity depth modeling</li>
-              <li>Institutional capital connectivity</li>
-              <li>OTC & global liquidity coordination</li>
+              <li>Institutional research & strategic advisory</li>
+              <li>Global liquidity research & strategic partnerships</li>
             </ul>
           </div>
         </div>
@@ -674,27 +672,29 @@
       <div class="contact-layout" data-reveal>
         <!-- Left: Info -->
         <div class="contact-info">
-          <div class="contact-email-block">
-            <p class="contact-overline">Get in Touch</p>
-            <a href="mailto:harry@helioslabs.com" class="contact-email-main">harry@helioslabs.com</a>
-          </div>
-
-          <div class="contact-offices">
+          <div class="contact-offices-hq">
+            <p class="contact-overline">Headquarters</p>
             <div class="contact-office">
               <h4 class="office-city">Seoul <span class="office-badge">HQ</span></h4>
               <p>31, Gangnam-daero 92-gil,<br>Gangnam-gu, Seoul,<br>Republic of Korea</p>
             </div>
-            <div class="contact-office">
-              <h4 class="office-city">Hong Kong</h4>
-              <p>100 Cyberport Road,<br>Pok Fu Lam,<br>Hong Kong</p>
-            </div>
-            <div class="contact-office">
-              <h4 class="office-city">San Jose</h4>
-              <p>99 South Almaden Boulevard,<br>San Jose, CA 95113,<br>United States</p>
-            </div>
-            <div class="contact-office">
-              <h4 class="office-city">Dubai</h4>
-              <p>Almas Tower,<br>Jumeirah Lakes Towers (JLT),<br>Dubai, UAE</p>
+          </div>
+
+          <div class="contact-offices-global">
+            <p class="contact-overline">Global Partners</p>
+            <div class="contact-offices">
+              <div class="contact-office">
+                <h4 class="office-city">Hong Kong </h4>
+                <p>100 Cyberport Road,<br>Pok Fu Lam,<br>Hong Kong</p>
+              </div>
+              <div class="contact-office">
+                <h4 class="office-city">San Jose </h4>
+                <p>99 South Almaden Boulevard,<br>San Jose, CA 95113,<br>United States</p>
+              </div>
+              <div class="contact-office">
+                <h4 class="office-city">Dubai </h4>
+                <p>Almas Tower,<br>Jumeirah Lakes Towers (JLT),<br>Dubai, UAE</p>
+              </div>
             </div>
           </div>
         </div>
@@ -707,15 +707,15 @@
               <h3 class="form-card-title">Let's start a conversation</h3>
               <div class="form-card-line"></div>
             </div>
-            <form class="contact-form" id="contactForm" onsubmit="event.preventDefault();">
+            <form class="contact-form" id="contactForm">
               <div class="form-row">
                 <div class="form-group">
                   <label for="fullName" class="form-label">Full Name</label>
-                  <input type="text" id="fullName" name="fullName" class="form-input" placeholder="Your name" autocomplete="name" />
+                  <input type="text" id="fullName" name="fullName" class="form-input" placeholder="Your name" autocomplete="name" required />
                 </div>
                 <div class="form-group">
                   <label for="email" class="form-label">Email</label>
-                  <input type="email" id="email" name="email" class="form-input" placeholder="you@company.com" autocomplete="email" />
+                  <input type="email" id="email" name="email" class="form-input" placeholder="you@company.com" autocomplete="email" required />
                 </div>
               </div>
               <div class="form-row">
@@ -725,17 +725,18 @@
                 </div>
                 <div class="form-group">
                   <label for="subject" class="form-label">Subject</label>
-                  <input type="text" id="subject" name="subject" class="form-input" placeholder="How can we help?" />
+                  <input type="text" id="subject" name="subject" class="form-input" placeholder="How can we help?" required />
                 </div>
               </div>
               <div class="form-group form-group-full">
                 <label for="message" class="form-label">Message</label>
-                <textarea id="message" name="message" class="form-input form-textarea" placeholder="Tell us about your project..." rows="5"></textarea>
+                <textarea id="message" name="message" class="form-input form-textarea" placeholder="Tell us about your project..." rows="5" required></textarea>
               </div>
               <button type="submit" class="form-submit" id="submitBtn">
                 <span>Submit Your Request</span>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </button>
+              <div id="formStatus" class="form-status"></div>
             </form>
           </div>
         </div>
@@ -767,5 +768,6 @@
 
   <script src="splash-cursor.js"></script>
   <script src="script.js"></script>
+  <script src="contact-form.js"></script>
 </body>
 </html>
