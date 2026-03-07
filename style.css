@@ -165,11 +165,11 @@ img {
   line-height: 1;
 }
 
-.logo-img {
-  width: 44px;
-  height: 44px;
+.logo-wordmark {
+  height: 36px;
+  width: auto;
   object-fit: contain;
-  filter: drop-shadow(0 0 4px rgba(212, 168, 83, 0.3));
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.1));
 }
 
 .logo-text-group {
@@ -1561,11 +1561,11 @@ section {
   gap: 0.6rem;
 }
 
-.footer-logo-img {
-  width: 36px;
-  height: 36px;
+.footer-logo-wordmark {
+  height: 28px;
+  width: auto;
   object-fit: contain;
-  filter: drop-shadow(0 0 3px rgba(212, 168, 83, 0.3));
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.08));
 }
 
 .footer-brand p {

@@ -1,12 +1,12 @@
 /* ============================================
    CONTACT FORM — Email Handler
-   Uses mailto: to send emails to harry@helioslabs.com
+   Uses mailto: to send emails to harry@helioslabs.info
    ============================================ */
 
 (function () {
   'use strict';
 
-  const RECIPIENT_EMAIL = 'harry@helioslabs.com';
+  const RECIPIENT_EMAIL = 'harry@helioslabs.info';
 
   const form = document.getElementById('contactForm');
   const submitBtn = document.getElementById('submitBtn');
