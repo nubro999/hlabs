@@ -391,8 +391,10 @@ img {
 }
 
 .sun-image {
-  width: 720px;
-  height: 720px;
+  width: min(720px, 50vw);
+  height: min(720px, 50vw);
+  max-width: 800px;
+  max-height: 800px;
   object-fit: contain;
   position: relative;
   z-index: 3;
@@ -407,8 +409,10 @@ img {
 
 .sun-glow {
   position: absolute;
-  width: 1200px;
-  height: 1200px;
+  width: min(1200px, 83vw);
+  height: min(1200px, 83vw);
+  max-width: 1400px;
+  max-height: 1400px;
   background: radial-gradient(
     circle,
     rgba(255, 230, 150, 0.35) 0%,
@@ -426,8 +430,10 @@ img {
 .hero-visual::before {
   content: '';
   position: absolute;
-  width: 1400px;
-  height: 1400px;
+  width: min(1400px, 97vw);
+  height: min(1400px, 97vw);
+  max-width: 1600px;
+  max-height: 1600px;
   z-index: 0;
   background:
     repeating-conic-gradient(
@@ -448,8 +454,10 @@ img {
 .hero-visual::after {
   content: '';
   position: absolute;
-  width: 1600px;
-  height: 1600px;
+  width: min(1600px, 111vw);
+  height: min(1600px, 111vw);
+  max-width: 1800px;
+  max-height: 1800px;
   z-index: 0;
   background:
     repeating-conic-gradient(
@@ -474,22 +482,28 @@ img {
 }
 
 .sun-ring-1 {
-  width: 820px;
-  height: 820px;
+  width: min(820px, 57vw);
+  height: min(820px, 57vw);
+  max-width: 950px;
+  max-height: 950px;
   animation: ringRotate 40s linear infinite;
 }
 
 .sun-ring-2 {
-  width: 960px;
-  height: 960px;
+  width: min(960px, 67vw);
+  height: min(960px, 67vw);
+  max-width: 1100px;
+  max-height: 1100px;
   border-style: dashed;
   border-color: rgba(239, 175, 66, 0.05);
   animation: ringRotate 55s linear infinite reverse;
 }
 
 .sun-ring-3 {
-  width: 1100px;
-  height: 1100px;
+  width: min(1100px, 76vw);
+  height: min(1100px, 76vw);
+  max-width: 1250px;
+  max-height: 1250px;
   border-color: rgba(239, 175, 66, 0.03);
   animation: ringRotate 70s linear infinite;
 }
